@@ -1,7 +1,6 @@
 <template>
-    <v-app>
       <v-carousel
-      cycle="true"
+      cycle
       interval="5000"
       >
         <v-carousel-item
@@ -10,7 +9,6 @@
           :src="item.src"
         ></v-carousel-item>
       </v-carousel>
-    </v-app>
 </template>
 
 <script>
