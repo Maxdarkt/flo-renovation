@@ -1,9 +1,7 @@
 <template>
   <div class="flex flex-col justify-between">
     <HeaderBar />
-    <v-app>
-      <Nuxt class="min-inter"/>
-    </v-app>
+    <Nuxt class="min-inter"/>
     <FooterBar />
   </div>
 </template>

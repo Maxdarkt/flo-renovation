@@ -1,11 +1,16 @@
 <template>
   <div>
     <CarousselSlide />
-    <v-row class="mt-16">
+    <div class="flex mt-24">
       <CardOne />
       <CardOne />
       <CardOne />
-    </v-row>
+    </div>
+    <div class="flex justify-center items-center my-24">
+      <button class="py-2 px-3 bg-blue-600 rounded">
+        Click me
+      </button>
+    </div>
   </div>
 </template>
 
