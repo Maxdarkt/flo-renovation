@@ -73,6 +73,9 @@ export default {
     // init the timer
     this.launchTimer()
   },
+  destroyed() {
+    clearInterval(this.timer);
+  },
   methods: {
     // launchTimer
     launchTimer() {
