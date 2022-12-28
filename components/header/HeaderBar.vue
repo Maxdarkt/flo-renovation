@@ -10,46 +10,46 @@
         <span class="navicon bg-grey-darkest flex items-center relative"></span>
       </label>
       <!-- Navigation links -->
-      <div class="menu border-b lg:border-none flex justify-end items-end list-reset m-0 w-full lg:w-auto relative lg:flex lg:top-auto lg:mr-4">
+      <div class="menu-nav border-b lg:border-none flex justify-end items-end list-reset m-0 w-full lg:w-auto relative lg:flex lg:top-auto lg:mr-4 -top-1">
         <!-- links ACCUEIL -->
         <span @click="menuItem()">
-          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-custom-red transition duration-500 border-b border-transparent hover:border-custom-red font-bold" exact-active-class="text-custom-red border-custom-red font-bold" to="/">
+          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-custom-red transition duration-500 border-b border-transparent lg:hover:border-custom-red font-bold" exact-active-class="text-custom-red lg:border-custom-red font-bold" to="/">
             ACCUEIL
           </nuxt-link>
         </span>
         <!-- links RENOVATION -->
         <span class="block border-t lg:border-none" @click="menuItem()">
-          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-custom-red border-b border-transparent hover:border-custom-red transition duration-500 font-bold" exact-active-class="text-custom-red border-custom-red font-bold" to="renovation">
+          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-custom-red border-b border-transparent lg:hover:border-custom-red transition duration-500 font-bold" exact-active-class="text-custom-red lg:border-custom-red font-bold" to="renovation">
             RENOVATION
           </nuxt-link>
         </span>
         <!-- links AMENAGEMENT -->
         <span class="block border-t lg:border-none" @click="menuItem()">
-          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-custom-red border-b border-transparent hover:border-custom-red transition duration-500 font-bold" exact-active-class="text-custom-red border-custom-red font-bold" to="amenagement">
+          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-custom-red border-b border-transparent lg:hover:border-custom-red transition duration-500 font-bold" exact-active-class="text-custom-red lg:border-custom-red font-bold" to="amenagement">
             AMENAGEMENT
           </nuxt-link>
         </span>
         <!-- links EXTENSION -->
         <span class="block border-t lg:border-none" @click="menuItem()">
-          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-custom-red border-b border-transparent hover:border-custom-red transition duration-500 font-bold" exact-active-class="text-custom-red border-custom-red font-bold" to="extension">
+          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-custom-red border-b border-transparent lg:hover:border-custom-red transition duration-500 font-bold" exact-active-class="text-custom-red lg:border-custom-red font-bold" to="extension">
             EXTENSION
           </nuxt-link>
         </span>
         <!-- links SOCIETE -->
         <span class="block border-t lg:border-none" @click="menuItem()">
-          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-custom-red border-b border-transparent hover:border-custom-red transition duration-500 font-bold" exact-active-class="text-custom-red border-custom-red font-bold" to="societe">
+          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-custom-red border-b border-transparent lg:hover:border-custom-red transition duration-500 font-bold" exact-active-class="text-custom-red lg:border-custom-red font-bold" to="societe">
             SOCIETE
           </nuxt-link>
         </span>
         <!-- links REALISATIONS -->
         <span class="block border-t lg:border-none" @click="menuItem()">
-          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-custom-red border-b border-transparent hover:border-custom-red transition duration-500 font-bold" exact-active-class="text-custom-red border-custom-red font-bold" to="realisations">
+          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-custom-red border-b border-transparent lg:hover:border-custom-red transition duration-500 font-bold" exact-active-class="text-custom-red lg:border-custom-red font-bold" to="realisations">
             REALISATIONS
           </nuxt-link>
         </span>
         <!-- links CONTACT -->
         <span class="block border-t lg:border-none" @click="menuItem()">
-          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-custom-red border-b border-transparent hover:border-custom-red transition duration-500 font-bold" exact-active-class="text-custom-red border-custom-red font-bold" to="contact">
+          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-custom-red border-b border-transparent lg:hover:border-custom-red transition duration-500 font-bold" exact-active-class="text-custom-red lg:border-custom-red font-bold" to="contact">
             CONTACT
           </nuxt-link>
         </span>
@@ -128,11 +128,11 @@ export default {
     top: -5px;
   }
 
-  .menu-btn:not(:checked) ~ .menu {
+  .menu-btn:not(:checked) ~ .menu-nav{
     display: none;
   }
 
-  .menu-btn:checked ~ .menu {
+  .menu-btn:checked ~ .menu-nav{
     display: block;
     z-index: 1000;
     background-color:#ffffff;

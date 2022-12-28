@@ -65,5 +65,25 @@ module.exports = {
       roman: 'upper-roman',
     }
   },
-  plugins: [],
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+        "primary": "#B61419", // original : #8C0427
+        "secondary": "#D9D9D9",
+        "accent": "#836B5D",
+        "neutral": "#F2F2F2",
+        "base-50": "#f9fafb",
+        "base-100": "#e5e7eb",
+        "info": "#41AEBD",
+        "success": "#489380",
+        "warning": "#EB7F13",
+        "error": "#E0192E",
+        },
+      },
+    ],
+  },
+  plugins: [
+    require('daisyui'),
+  ],
 }
