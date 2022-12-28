@@ -1,7 +1,7 @@
 <template>
   <div>
     <nuxt-link to="/">
-      <p class="bg-custom-red text-white text-center lg:text-xl px-3 py-0.5 drop-shadow-xl shadow-lg -skew-y-2 transition-all duration-300" :class="{'text-xs lg:text-sm' : isScrolled}">
+      <p class="bg-primary text-white text-center lg:text-xl px-3 py-0.5 drop-shadow-xl shadow-lg -skew-y-2 transition-all duration-300" :class="{'text-xs lg:text-sm' : isScrolled}">
         Flo-<strong>Rénovation</strong>
       </p>
     </nuxt-link>

@@ -9,9 +9,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        'custom-red': '#b61419',
-      },
+      colors: {},
       backdropGrayscale: {
         25: '.25',
         50: '.5',
@@ -70,7 +68,7 @@ module.exports = {
       {
         mytheme: {
         "primary": "#B61419", // original : #8C0427
-        "secondary": "#D9D9D9",
+        "secondary": "#0E2038",
         "accent": "#836B5D",
         "neutral": "#F2F2F2",
         "base-50": "#f9fafb",

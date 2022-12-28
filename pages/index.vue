@@ -2,43 +2,40 @@
   <div>
     <CarousselSlide />
     <div class="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:justify-around my-24">
-      <CardOne 
-        v-for="item of picturesCard" :key="item.id" 
-        id="`card-${i}`" 
-        class="max-w-[300px]"
+      <CardVertImgDesc 
+        v-for="item of picturesCard"
+        :id="`card-${item.id}`"
+        :key="item.id"
         :src="item.src"
         :alt="item.alt"
         :title="item.title"
         :text="item.text"
-        :isBtn="item.isBtn"
-        :btnText="item.btnText"
-        :isLink="item.isLink"
-        :linkText="item.linkText"
+        :is-btn="item.isBtn"
+        :btn-text="item.btnText"
+        :is-link="item.isLink"
+        :link-text="item.linkText"
         :to="item.to"
+        class="max-w-[300px]"
         />
     </div>
-    <div>
-      <div>
-        <p>
-          &#xF293;
-        </p>
-      </div>
-    </div>
+    <BannerStrongPoint />
+    <BannerRealisation />
   </div>
 </template>
 
 <script>
 import CarousselSlide from '@/components/caroussel/caroussel-slide.vue'
-import CardOne from '@/components/card/card-one.vue'
+import CardVertImgDesc from '@/components/card/card-vert-image-desc.vue'
+import BannerStrongPoint from '@/components/banner/BannerStrongPoint.vue'
+import BannerRealisation from '@/components/banner/BannerRealisation.vue'
 
 export default {
   name: 'IndexPage',
   components: {
     CarousselSlide,
-    CardOne
-  },
-  head: {
-    title: 'Accueil',
+    CardVertImgDesc,
+    BannerStrongPoint,
+    BannerRealisation
   },
   data() {
     return {
@@ -81,6 +78,9 @@ export default {
         }
       ]
     }
+  },
+  head: {
+    title: 'Accueil',
   },
   mounted() {
     // console.log(this.$vuetify.theme.dark)

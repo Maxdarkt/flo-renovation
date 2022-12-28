@@ -25,15 +25,15 @@
 
 <script>
 export default {
-  name: 'CardOne',
+  name: 'CardVertImgDesc',
   props: {
     src: {
       type: String,
-      defaultValue: null,
+      defaultValue: 'https://placeimg.com/400/225/arch',
     },
     alt: {
       type: String,
-      defaultValue: null,
+      defaultValue: 'photo',
     },
     title: {
       type: String,
@@ -41,11 +41,11 @@ export default {
     },
     text: {
       type: String,
-      defaultValue: 'Text ...',
+      defaultValue: 'Laudantium voluptatum odio in officiis vero ratione inventore ex quia ipsum quae ducimus doloremque, ad laborum accusantium molestiae fugit quam repellendus modi magni? Aliquam quae nihil repellendus alias nostrum fugit.',
     },
     isBtn: {
       type: Boolean,
-      defaultValue: false
+      defaultValue: true
     },
     btnText: {
       type: String,

@@ -27,7 +27,7 @@ export default {
 <style>
 .min-inter{
   /* Header + Footer = 32 * 0.25 rem = 8rem */
-  min-height: calc(100vh - 8rem);
-  margin-top: 6.5rem;
+  min-height: calc(100vh - 14rem);
+  margin-top: 6rem;
 }
 </style>
