@@ -17,7 +17,7 @@
         </div>
         <div class="w-full flex justify-center items-center">
           <outline-map-icon class="w-4 h-4 text-primary" />
-          <a href="https://www.google.fr/maps/place/7+Av.+de+Bouvard,+74000+Annecy/@45.9029365,6.1183461,17z/data=!3m1!4b1!4m5!3m4!1s0x478b855808d77a0b:0xd2ddbaf4aeba1fb!8m2!3d45.9029328!4d6.1205401" class="ml-2">
+          <a href="https://www.google.fr/maps/place/7+Av.+de+Bouvard,+74000+Annecy/@45.9029365,6.1183461,17z/data=!3m1!4b1!4m5!3m4!1s0x478b855808d77a0b:0xd2ddbaf4aeba1fb!8m2!3d45.9029328!4d6.1205401" target="_blank" class="ml-2">
             7 avenue Bouvard,<br /> 74000 ANNECY
           </a>
         </div>

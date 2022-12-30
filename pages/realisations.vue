@@ -6,11 +6,11 @@
       :title="titleBar.title" 
       :description="titleBar.description"
     />
-    <div class="lg:max-w-screen-lg mx-auto flex space-x-4 pl-4 mt-16">
+    <div class="lg:max-w-screen-lg mx-auto flex space-x-4 pl-4 my-8">
       <div class="form-control">
         <label class="label cursor-pointer">
           <span class="label-text mr-4">Toutes</span> 
-          <input type="radio" name="radio-10" class="radio checked:bg-primary" @click="filterArray('all')" checked />
+          <input type="radio" name="radio-10" class="radio checked:bg-primary" checked @click="filterArray('all')" />
         </label>
       </div>
       <div class="form-control">
@@ -212,7 +212,6 @@ export default {
   },
   mounted() {
     this.realisationsFiltered = [].concat(this.realisations);
-    console.log(this.realisationsFiltered)
   },
   methods: {
     openModal(payload) {
