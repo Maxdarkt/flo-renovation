@@ -200,8 +200,8 @@ export default {
         }
       ],
       titleBar: {
-        isPicture: true,
-        src: require('@/assets/images/background/fond_batiment_1.jpg'),
+        isPicture: false,
+        src: 'https://placeimg.com/1400/400/arch',
         title: 'Réalisations',
         titleColor: 'text-primary',
         description: 'Voici les réalisations de Flo Rénovation. Chantiers neufs, rénovations, extensions ...'
@@ -235,7 +235,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

@@ -1,6 +1,14 @@
 <template>
   <div class="w-full flex flex-col items-center">
-    <div v-if="isPicture" class="w-full h-40 bg-center bg-cover bg-no-repeat flex justify-center items-center" :style="{background: `url(${src})`}">
+    <div 
+      v-if="isPicture" 
+      :style="{
+        background: `url(${src})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
+      }" 
+      class="w-full h-40 flex justify-center items-center">
       <h1 class="text-4xl font-semibold" :class="titleColor">
         {{  title  }}
       </h1>

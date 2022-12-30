@@ -3,7 +3,8 @@
     <BannerTitle 
       :is-picture="titleBar.isPicture"
       :src="titleBar.src" 
-      :title="titleBar.title" 
+      :title="titleBar.title"
+      :title-color="titleBar.titleColor"
       :description="titleBar.description"
     />
     <div class="lg:max-w-screen-lg mx-auto mt-8">
@@ -98,9 +99,10 @@ export default {
       currentTitle: null,
       currentDescription: null,
       titleBar: {
-        isPicture: false,
+        isPicture: true,
         src: require('@/assets/images/background/societe.jpg'),
         title: 'Société',
+        titleColor: 'text-primary',
         description: 'Corrupti amet asperiores, totam quam consequatur voluptatem quos perferendis.'
       },
       pictures: [

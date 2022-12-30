@@ -69,7 +69,19 @@ export default {
         {
           id: 1,
           src: require('@/assets/images/caroussel/chambre.jpg'),
-          alt: 'Photo rénovation ',
+          alt: 'Photo neuf ',
+          title: 'Neuf',
+          text: 'Lorem ipsum dolor sit amet, consectetur',
+          isBtn: false,
+          btnText: 'En savoir +',
+          isLink: true,
+          linkText: 'En savoir +',
+          to: 'neuf'
+        },
+        {
+          id: 2,
+          src: require('@/assets/images/caroussel/chambre.jpg'),
+          alt: 'photo rénovation',
           title: 'Rénovation',
           text: 'Lorem ipsum dolor sit amet, consectetur',
           isBtn: false,
@@ -77,18 +89,6 @@ export default {
           isLink: true,
           linkText: 'En savoir +',
           to: 'renovation'
-        },
-        {
-          id: 2,
-          src: require('@/assets/images/caroussel/chambre.jpg'),
-          alt: 'photo aménagement',
-          title: 'Aménagement',
-          text: 'Lorem ipsum dolor sit amet, consectetur',
-          isBtn: false,
-          btnText: 'En savoir +',
-          isLink: true,
-          linkText: 'En savoir +',
-          to: 'amenagement'
         },
         {
           id: 3,

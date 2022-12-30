@@ -198,8 +198,8 @@ export default {
   data() {
     return {
       titleBar: {
-        isPicture: true,
-        src: require('@/assets/images/background/fond_batiment_2.jpg'),
+        isPicture: false,
+        src: 'https://placeimg.com/1400/400/arch',
         title: 'Contact',
         titleColor: 'text-primary',
         description: 'Si vous avez la moindre question, si vous souhaitez que l\'on vous rapelle, c\'est ici !'
