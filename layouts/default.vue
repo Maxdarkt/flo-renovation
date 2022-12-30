@@ -7,15 +7,8 @@
 </template>
 
 <script>
-import HeaderBar from '@/components/header/HeaderBar.vue'
-import FooterBar from '@/components/footer/FooterBar.vue'
-
 export default {
   name: 'DefaultLayout',
-  components: {
-    HeaderBar,
-    FooterBar
-  },
   data() {
     return {
       

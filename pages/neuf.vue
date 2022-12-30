@@ -24,8 +24,8 @@
           </p>
         </div>
         <CarousselSlide 
-        class="rounded-md"
-        :pictures="picturesSlide"
+          class="rounded-md"
+          :pictures="picturesSlide"
         />
       </div>
     </div>
@@ -35,7 +35,7 @@
 
 <script>
 export default {
-  name: 'RenovationPage',
+  name: 'NeufPage',
   data() {
     return {
       picturesSlide: [
@@ -71,13 +71,13 @@ export default {
       titleBar: {
         isPicture: true,
         src: 'https://placeimg.com/1400/400/arch',
-        title: 'Rénovation',
+        title: 'Neuf',
         description: 'Corrupti amet asperiores, totam quam consequatur voluptatem quos perferendis.'
       }
     }
   },
   head: {
-    title: 'Rénovation',
+    title: 'Neuf',
   }
 }
 </script>

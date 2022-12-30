@@ -1,6 +1,8 @@
 <template>
   <div>
-    <CarousselSlide />
+    <CarousselSlide 
+      :pictures="picturesSlide"
+    />
     <div class="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:justify-around my-24">
       <CardVertImgDesc 
         v-for="item of picturesCard"
@@ -16,7 +18,7 @@
         :link-text="item.linkText"
         :to="item.to"
         class="max-w-[300px]"
-        />
+      />
     </div>
     <BannerStrongPoint />
     <BannerRealisation />
@@ -24,21 +26,45 @@
 </template>
 
 <script>
-import CarousselSlide from '@/components/caroussel/caroussel-slide.vue'
-import CardVertImgDesc from '@/components/card/card-vert-image-desc.vue'
-import BannerStrongPoint from '@/components/banner/BannerStrongPoint.vue'
-import BannerRealisation from '@/components/banner/BannerRealisation.vue'
+import CardVertImgDesc from "@/components/card/CardVertImageDesc.vue"
 
 export default {
   name: 'IndexPage',
   components: {
-    CarousselSlide,
-    CardVertImgDesc,
-    BannerStrongPoint,
-    BannerRealisation
+    CardVertImgDesc
   },
   data() {
     return {
+      picturesSlide: [
+        {
+          id: 1,
+          src: require('@/assets/images/caroussel/baies_vitrees.jpg'),
+          alt: 'baie vitrées',
+          title: 'Titre 1',
+          description: 'Lorem ipsum dolor sit amet, consectetur ...'
+        },
+        {
+          id: 2,
+          src: require('@/assets/images/caroussel/chambre.jpg'),
+          alt: 'chambre',
+          title: 'Titre 2',
+          description: 'Lorem ipsum dolor sit amet, consectetur ...'
+        },
+        {
+          id: 3,
+          src: require('@/assets/images/caroussel/maison_1.jpg'),
+          alt: 'Maison',
+          title: 'Titre 3',
+          description: 'Lorem ipsum dolor sit amet, consectetur ...'
+        },
+        {
+          id: 4,
+          src: require('@/assets/images/caroussel/pool_house.jpg'),
+          alt: 'Maison avec piscine',
+          title: 'Titre 4',
+          description: 'Lorem ipsum dolor sit amet, consectetur ...'
+        },
+      ],
       picturesCard: [
         {
           id: 1,
@@ -81,9 +107,6 @@ export default {
   },
   head: {
     title: 'Accueil',
-  },
-  mounted() {
-    // console.log(this.$vuetify.theme.dark)
   }
 }
 </script>

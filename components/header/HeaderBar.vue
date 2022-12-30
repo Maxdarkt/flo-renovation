@@ -17,16 +17,16 @@
             ACCUEIL
           </nuxt-link>
         </span>
+        <!-- links NEUF -->
+        <span class="block border-t lg:border-none" @click="menuItem()">
+          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent lg:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="neuf">
+            NEUF
+          </nuxt-link>
+        </span>
         <!-- links RENOVATION -->
         <span class="block border-t lg:border-none" @click="menuItem()">
           <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent lg:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="renovation">
             RENOVATION
-          </nuxt-link>
-        </span>
-        <!-- links AMENAGEMENT -->
-        <span class="block border-t lg:border-none" @click="menuItem()">
-          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent lg:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="amenagement">
-            AMENAGEMENT
           </nuxt-link>
         </span>
         <!-- links EXTENSION -->
@@ -59,13 +59,9 @@
 </template>
 
 <script>
-import HeaderLogo from './HeaderLogo.vue'
 
 export default {
   name: 'HeaderBar',
-  components: {
-    HeaderLogo
-  },
   data() {
     return {
       desktop: true,

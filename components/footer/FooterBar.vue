@@ -1,7 +1,7 @@
 <template>
-  <footer class="relative h-32 bg-black">
+  <footer class="relative h-32 bg-secondary">
     <div class="w-full h-24 text-white text-xs font-light pr-2 flex items-center">
-      <HeaderLogo class="w-52 pt-4"/>
+      <HeaderLogo class="w-56 pt-4"/>
       <div class="w-full flex justify-around items-center divide-x-2 divide-gray-200">
         <div class="w-full flex justify-center">
           <outline-phone-icon class="w-4 h-4 text-primary" />
@@ -39,7 +39,7 @@
       <p>
         &copy; Copyright {{ new Date().getFullYear() }} Flo Rénovation
       </p>
-      <button class="absolute right-4 bottom-4 btn-circle btn-primary flex justify-center items-center w-8 h-8" @click="scrollTop">
+      <button class="absolute right-6 bottom-4 btn-circle btn-primary flex justify-center items-center w-8 h-8" @click="scrollTop">
         <outline-chevron-up-icon class="w-6 h-6" />
       </button>
     </div>

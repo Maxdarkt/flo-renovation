@@ -29,39 +29,39 @@ export default {
   props: {
     src: {
       type: String,
-      defaultValue: 'https://placeimg.com/400/225/arch',
+      default: 'https://placeimg.com/400/225/arch',
     },
     alt: {
       type: String,
-      defaultValue: 'photo',
+      default: 'photo',
     },
     title: {
       type: String,
-      defaultValue: 'Titre',
+      default: 'Titre',
     },
     text: {
       type: String,
-      defaultValue: 'Laudantium voluptatum odio in officiis vero ratione inventore ex quia ipsum quae ducimus doloremque, ad laborum accusantium molestiae fugit quam repellendus modi magni? Aliquam quae nihil repellendus alias nostrum fugit.',
+      default: 'Laudantium voluptatum odio in officiis vero ratione inventore ex quia ipsum quae ducimus doloremque, ad laborum accusantium molestiae fugit quam repellendus modi magni? Aliquam quae nihil repellendus alias nostrum fugit.',
     },
     isBtn: {
       type: Boolean,
-      defaultValue: true
+      default: true
     },
     btnText: {
       type: String,
-      defaultValue: 'En savoir +',
+      default: 'En savoir +',
     },
     isLink: {
       type: Boolean,
-      defaultValue: false
+      default: false
     },
     linkText: {
       type: String,
-      defaultValue: 'En savoir +',
+      default: 'En savoir +',
     },
     to: {
       type: String,
-      defaultValue: '',
+      default: '',
     }
 
   }

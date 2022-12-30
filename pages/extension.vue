@@ -35,7 +35,7 @@
 
 <script>
 export default {
-  name: 'RenovationPage',
+  name: 'ExtensionPage',
   data() {
     return {
       picturesSlide: [
@@ -66,18 +66,18 @@ export default {
           alt: 'Maison avec piscine',
           title: 'Titre 4',
           description: 'Lorem ipsum dolor sit amet, consectetur ...'
-        },
+        }
       ],
       titleBar: {
         isPicture: true,
         src: 'https://placeimg.com/1400/400/arch',
-        title: 'Rénovation',
+        title: 'Extension',
         description: 'Corrupti amet asperiores, totam quam consequatur voluptatem quos perferendis.'
       }
     }
   },
   head: {
-    title: 'Rénovation',
+    title: 'Extension',
   }
 }
 </script>
