@@ -69,8 +69,8 @@ export default {
         },
       ],
       titleBar: {
-        isPicture: true,
-        src: 'https://placeimg.com/1400/400/arch',
+        isPicture: false,
+        src: require('@/assets/images/background/renovation.jpg'),
         title: 'Rénovation',
         description: 'Corrupti amet asperiores, totam quam consequatur voluptatem quos perferendis.'
       }

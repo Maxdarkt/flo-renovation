@@ -1,7 +1,7 @@
 <template>
   <div class="w-full flex flex-col items-center">
     <div v-if="isPicture" class="w-full h-40 bg-center bg-cover bg-no-repeat flex justify-center items-center" :style="{background: `url(${src})`}">
-      <h1 class="text-4xl font-semibold text-white">
+      <h1 class="text-4xl font-semibold" :class="titleColor">
         {{  title  }}
       </h1>
     </div>
@@ -37,6 +37,10 @@ export default {
     title: {
       type: String,
       default: 'Titre',
+    },
+    titleColor: {
+      type: String,
+      default: 'text-white',
     },
     description: {
       type: String,

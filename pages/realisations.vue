@@ -4,6 +4,7 @@
       :is-picture="titleBar.isPicture"
       :src="titleBar.src" 
       :title="titleBar.title" 
+      :title-color="titleBar.titleColor"
       :description="titleBar.description"
     />
     <div class="lg:max-w-screen-lg mx-auto flex space-x-4 pl-4 my-8">
@@ -200,8 +201,9 @@ export default {
       ],
       titleBar: {
         isPicture: true,
-        src: 'https://placeimg.com/1400/400/arch',
+        src: require('@/assets/images/background/fond_batiment_1.jpg'),
         title: 'Réalisations',
+        titleColor: 'text-primary',
         description: 'Voici les réalisations de Flo Rénovation. Chantiers neufs, rénovations, extensions ...'
       },
       realisationsFiltered: [],

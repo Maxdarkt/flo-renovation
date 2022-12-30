@@ -3,7 +3,8 @@
     <BannerTitle 
       :is-picture="titleBar.isPicture"
       :src="titleBar.src" 
-      :title="titleBar.title" 
+      :title="titleBar.title"
+      :title-color="titleBar.titleColor"
       :description="titleBar.description"
     />
     <!-- Form contact -->
@@ -198,8 +199,9 @@ export default {
     return {
       titleBar: {
         isPicture: true,
-        src: 'https://placeimg.com/1400/400/arch',
+        src: require('@/assets/images/background/fond_batiment_2.jpg'),
         title: 'Contact',
+        titleColor: 'text-primary',
         description: 'Si vous avez la moindre question, si vous souhaitez que l\'on vous rapelle, c\'est ici !'
       },
       projectOptions: [

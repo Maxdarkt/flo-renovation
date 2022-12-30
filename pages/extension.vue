@@ -69,7 +69,7 @@ export default {
         }
       ],
       titleBar: {
-        isPicture: true,
+        isPicture: false,
         src: 'https://placeimg.com/1400/400/arch',
         title: 'Extension',
         description: 'Corrupti amet asperiores, totam quam consequatur voluptatem quos perferendis.'

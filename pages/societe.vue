@@ -98,8 +98,8 @@ export default {
       currentTitle: null,
       currentDescription: null,
       titleBar: {
-        isPicture: true,
-        src: 'https://placeimg.com/1400/400/arch',
+        isPicture: false,
+        src: require('@/assets/images/background/societe.jpg'),
         title: 'Société',
         description: 'Corrupti amet asperiores, totam quam consequatur voluptatem quos perferendis.'
       },
