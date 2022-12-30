@@ -53,6 +53,10 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    ['nuxt-gmaps', {
+      key: 'AIzaSyBmo_Gg_y6VDtA7PjEDR7mbRVyF-mACEPc',
+      //you can use libraries: ['places']
+    }]
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

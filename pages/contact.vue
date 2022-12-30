@@ -6,6 +6,7 @@
       :title="titleBar.title" 
       :description="titleBar.description"
     />
+    <!-- Form contact -->
     <div class="flex mt-16 p-4">
       <!-- Infos contact -->
       <div class="w-2/5 lg:pl-32">
@@ -151,6 +152,33 @@
         </form>
       </div>
     </div>
+    <!-- MAPS -->
+    <div class="mb-4">
+      <GMap
+        ref="gMap"
+        language="fr"
+        :cluster="{options: {styles: clusterStyle}}"
+        :center="{lat: locations[0].lat, lng: locations[0].lng}"
+        :options="{fullscreenControl: false, styles: mapStyle}"
+        :zoom="12"
+      >
+        <GMapMarker
+          v-for="location in locations"
+          :key="location.id"
+          :position="{lat: location.lat, lng: location.lng}"
+          :options="{icon: location === currentLocation ? pins.selected : pins.notSelected}"
+          @click="currentLocation = location"
+        >
+          <GMapInfoWindow :options="{maxWidth: 200}">
+            <code>
+              lat: {{ location.lat }},
+              lng: {{ location.lng }}
+            </code>
+          </GMapInfoWindow>
+        </GMapMarker>
+        <GMapCircle :options="circleOptions"/>
+      </GMap>
+    </div>
   </div>
 </template>
 
@@ -190,6 +218,30 @@ export default {
         { 
           label: 'Autre',
           value: 'other'
+        }
+      ],
+      currentLocation: {
+        lat: 45.90324,
+        lng: 6.12129
+      },
+      circleOptions: {},
+      locations: [
+        {
+          lat: 45.90324,
+          lng: 6.12129
+        }
+      ],
+      pins: {
+        selected: null,
+        notSelected: null
+      },
+      mapStyle: [],
+      clusterStyle: [
+        {
+          url: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m1.png",
+          width: 56,
+          height: 56,
+          textColor: "#fff"
         }
       ]
     }
