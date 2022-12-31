@@ -7,7 +7,7 @@
     <div class="my-4">
       Voici quelques une de nos <nuxt-link to="realisations" class="btn btn-primary" >réalisations</nuxt-link> :
     </div>
-    <div class="w-full py-8 flex justify-around">
+    <div class="w-full py-8 flex flex-col mymd:flex-row mymd:justify-around items-center space-y-8 mymd:space-y-0">
       <CardImageLegend 
         v-for="picture of pictures"
         :id="picture.id"

@@ -3,7 +3,7 @@
     <CarousselSlide 
       :pictures="picturesSlide"
     />
-    <div class="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:justify-around my-24">
+    <div class="flex flex-col mymd:flex-row items-center space-y-8 mymd:space-y-0 mymd:justify-around my-24">
       <CardVertImgDesc 
         v-for="item of picturesCard"
         :id="`card-${item.id}`"

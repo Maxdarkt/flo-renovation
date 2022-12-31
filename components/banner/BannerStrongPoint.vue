@@ -1,15 +1,15 @@
 <template>
-  <div class="w-full py-8 px-8 bg-secondary text-white mb-16">
+  <div class="w-full py-8 px-2 xs:px-4 mymd:px-8 bg-secondary text-white mb-16">
     <h2 class="text-3xl text-center text-uppercase">
       Pourquoi choisir <span class="text-primary font-semibold">Flo Rénovation</span> 
     </h2>
-    <div class="flex justify-around mt-8 divide-x-2 divide-gray-300">
-      <div v-for="item of items" :key="item.id" class="p-8 flex flex-col justify-start items-center w-[300px]">
+    <div class="flex flex-col mymd:flex-row mymd:justify-around mt-8 mymd:divide-x-2 mymd:divide-gray-300 space-y-8 mymd:space-y-0">
+      <div v-for="item of items" :key="item.id" class="px-4 mymd:p-8 flex flex-col justify-start items-center w-[300px] mx-auto">
         <component :is="item.icon" class="w-16 h-16 text-primary" />
         <h3 class="text-center text-xl my-4">
           {{  item.title }}
         </h3>
-        <p class="text-justify font-normal">
+        <p class="text-justify font-normal break-words">
           {{  item.description  }}
         </p>
       </div>

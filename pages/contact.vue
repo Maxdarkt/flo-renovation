@@ -223,14 +223,14 @@ export default {
         }
       ],
       currentLocation: {
-        lat: 45.90324,
-        lng: 6.12129
+        lat: 45.90283,
+        lng: 6.12166
       },
       circleOptions: {},
       locations: [
         {
-          lat: 45.90324,
-          lng: 6.12129
+          lat: 45.90283,
+          lng: 6.12166
         }
       ],
       pins: {
