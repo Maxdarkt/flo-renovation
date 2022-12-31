@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full py-8 px-8 bg-secondary/95 text-white flex justify-around ">
-    <div v-for="item of items" :key="item.id" class="p-8 flex flex-col justify-start items-center w-[300px]">
+  <div class="w-full py-8 px-2 md:px-8 bg-secondary/95 text-white flex flex-col md:flex-row items-center md:justify-around space-y-12 md:space-y-0">
+    <div v-for="item of items" :key="item.id" class="px-2 md:p-8 flex flex-col justify-start items-center xs:w-[300px]">
       <component :is="item.icon" class="w-16 h-16 text-primary" />
       <h3 class="text-center text-xl mt-4">
         {{  item.title }}
@@ -34,7 +34,7 @@ export default {
         },
         {
           id: 3,
-          icon: 'outline-badge-check-icon',
+          icon: 'outline-shield-check-icon',
           title: 'Garantie Technique',
           description: 'L\'équipe qui est en charge de votre projet à pour objectif d\'apporter les meilleures solutions techniques.'
         }

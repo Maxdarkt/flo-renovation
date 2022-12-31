@@ -8,8 +8,8 @@
       :description="titleBar.description"
     />
     <div class="lg:max-w-screen-lg mx-auto mt-8">
-      <div class="flex items-center px-4">
-        <div class="w-full text-justify pr-4 flex flex-col">
+      <div class="grid grid-cols-12 space-y-14 md:space-y-0 px-4">
+        <div class="col-span-12 md:col-span-6 text-justify md:pr-4 flex flex-col">
           <h2 class="w-full text-2xl font-semibold mt-4">
             A PROPOS DE <span class="text-primary font-bold">FLO RENOVATION</span>
           </h2>
@@ -27,15 +27,13 @@
             <nuxt-link to="contact" class="btn btn-primary">Devis gratuit</nuxt-link>
           </div>
         </div>
-        <div>
+        <div class="col-span-12 md:col-span-6 min-h-[250px] xs:min-h-[350px] sm:min-h-[500px]">
           <CardImageLegend 
             :id="pictures[0].id"
             :key="`galerie-${pictures[0].id}`"
             :src="pictures[0].src"
             :alt="pictures[0].alt"
             :title="pictures[0].title"
-            :width="500"
-            :height="400"
             @event-open-modal="openModal"
           />
         </div>
@@ -43,8 +41,8 @@
     </div>
     <BannerQuality class="my-16"/>
     <div class="lg:max-w-screen-lg mx-auto mt-8 mb-16">
-      <div class="flex items-center px-4">
-        <div class="w-full text-justify pl-4 flex flex-col order-2">
+      <div class="grid grid-cols-12 space-y-14 md:space-y-0 px-4">
+        <div class="col-span-12 md:col-span-6 text-justify md:pl-4 flex flex-col order-2">
           <h2 class="w-full text-2xl font-semibold mt-4">
             QUI SOMMES-NOUS ?
           </h2>
@@ -62,15 +60,13 @@
             <nuxt-link to="contact" class="btn btn-primary">Contactez-nous</nuxt-link>
           </div>
         </div>
-        <div>
+        <div class="col-span-12 md:col-span-6 min-h-[250px] xs:min-h-[350px] sm:min-h-[500px]">
           <CardImageLegend 
             :id="pictures[1].id"
             :key="`galerie-${pictures[1].id}`"
             :src="pictures[1].src"
             :alt="pictures[1].alt"
             :title="pictures[1].title"
-            :width="500"
-            :height="400"
             @event-open-modal="openModal"
           />
         </div>

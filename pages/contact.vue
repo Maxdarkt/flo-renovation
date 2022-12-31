@@ -8,9 +8,9 @@
       :description="titleBar.description"
     />
     <!-- Form contact -->
-    <div class="flex mt-16 p-4">
+    <div class="flex flex-col md:flex-row items-center mt-16 p-4">
       <!-- Infos contact -->
-      <div class="w-2/5 lg:pl-32">
+      <div class="w-full xxs:w-3/4 md:w-2/5 md:pl-4 mymd:pl-10 lg:pl-16">
         <h2 class="text-2xl font-semibold">
           Informations de contact
         </h2>
@@ -55,7 +55,7 @@
         </div>
       </div>
       <!-- Form Contact -->
-      <div class="w-3/5 p-4 bg-white rounded-md">
+      <div class="w-full md:w-3/5 p-4 bg-white rounded-md mt-8 md:mt-0">
         <form action="#">
           <div class="grid gap-6 mb-6 md:grid-cols-2">
             <InputText 

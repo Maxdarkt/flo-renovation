@@ -18,7 +18,7 @@
         {{  title  }}
       </h1>
     </div>
-    <div class="w-[70%] h-24 flex justify-center items-center bg-white rounded-md shadow-lg -mt-8 p-8">
+    <div class="w-[90%] sm:w-[70%] h-fit sm:h-24 flex justify-center items-center bg-white rounded-md shadow-lg -mt-8 p-8">
       <p>
         {{  description }}
       </p>

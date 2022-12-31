@@ -1,10 +1,6 @@
 <template>
   <div 
-    :style="{
-        width: `${width}px`,
-        height: `${height}px`
-      }"
-    class="group card relative w-[300px] h-[250px] shadow-xl rounded-lg overflow-hidden cursor-pointer"
+    class="group card relative w-full h-full shadow-xl rounded-lg overflow-hidden cursor-pointer"
     @click="emitOpenModal({currentPicture: src, currentAlt: alt, currentTitle: title, currentDescription: description})">
     <div
       :style="{
@@ -43,14 +39,6 @@ export default {
     type: String,
     default: null,
   },
-  width: {
-    type: Number,
-    default: 300
-  },
-  height: {
-    type: Number,
-    default: 250
-  }
  },
  methods: {
   emitOpenModal(payload) {

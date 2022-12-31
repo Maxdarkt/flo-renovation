@@ -8,7 +8,7 @@
     />
     <div class="lg:max-w-screen-lg mx-auto">
       <h2 class="w-full text-2xl font-semibold text-center my-16">Titre 2</h2>
-      <div class="flex px-4">
+      <div class="flex flex-col md:flex-row space-y-14 md:space-y-0 px-4">
         <div class="w-full text-justify pr-4">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis expedita nihil veniam incidunt ut ipsam, inventore numquam similique odio a eaque voluptatem aliquid voluptas illo id quos excepturi assumenda unde.

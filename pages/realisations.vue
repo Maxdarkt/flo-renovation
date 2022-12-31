@@ -7,28 +7,28 @@
       :title-color="titleBar.titleColor"
       :description="titleBar.description"
     />
-    <div class="lg:max-w-screen-lg mx-auto flex space-x-4 pl-4 my-8">
+    <div class="lg:max-w-screen-lg mx-auto flex flex-col sm:flex-row items-center space-x-0 sm:space-x-4 px-2 sm:pl-4 my-8">
       <div class="form-control">
         <label class="label cursor-pointer">
-          <span class="label-text mr-4">Toutes</span> 
+          <span class="w-24 sm:w-20 label-text mr-4">Toutes</span> 
           <input type="radio" name="radio-10" class="radio checked:bg-primary" checked @click="filterArray('all')" />
         </label>
       </div>
       <div class="form-control">
         <label class="label cursor-pointer">
-          <span class="label-text mr-4">Neufs</span> 
+          <span class="w-24 sm:w-20 label-text mr-4">Neufs</span> 
           <input type="radio" name="radio-10" class="radio checked:bg-primary" @click="filterArray('news')" />
         </label>
       </div>
       <div class="form-control">
         <label class="label cursor-pointer">
-          <span class="label-text mr-4">Rénovations</span> 
+          <span class="w-24 sm:w-20 label-text mr-4">Rénovations</span> 
           <input type="radio" name="radio-10" class="radio checked:bg-primary" @click="filterArray('renovation')" />
         </label>
       </div>
       <div class="form-control">
         <label class="label cursor-pointer">
-          <span class="label-text mr-4">extension</span> 
+          <span class="w-24 sm:w-20 label-text mr-4">extension</span> 
           <input type="radio" name="radio-10" class="radio checked:bg-primary" @click="filterArray('extension')" />
         </label>
       </div>
@@ -42,8 +42,7 @@
         :alt="realisation.alt"
         :title="realisation.title"
         :description="realisation.description"
-        :width="500"
-        :height="400"
+        class="w-[280px] xxs:w-[300px] h-[230px] xxs:h-[250px]"
         @event-open-modal="openModal"
       />
     </div>
