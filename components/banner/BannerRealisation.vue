@@ -11,10 +11,11 @@
       <CardImageLegend 
         v-for="picture of pictures"
         :id="picture.id"
-        :key="`galerie-${picture.id}`"
+        :key="`card-image-${picture.id}`"
         :src="picture.src"
         :alt="picture.alt"
         :title="picture.title"
+        class="w-[280px] xxs:w-[300px] h-[230px] xxs:h-[250px]"
         @event-open-modal="openModal"
       />
     </div>

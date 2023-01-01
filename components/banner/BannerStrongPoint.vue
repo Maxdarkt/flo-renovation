@@ -4,7 +4,7 @@
       Pourquoi choisir <span class="text-primary font-semibold">Flo Rénovation</span> 
     </h2>
     <div class="flex flex-col mymd:flex-row mymd:justify-around mt-8 mymd:divide-x-2 mymd:divide-gray-300 space-y-8 mymd:space-y-0">
-      <div v-for="item of items" :key="item.id" class="px-4 mymd:p-8 flex flex-col justify-start items-center w-[300px] mx-auto">
+      <div v-for="item of items" :key="item.id" class="px-4 mymd:p-8 flex flex-col justify-start items-center xxs:w-[300px] mx-auto">
         <component :is="item.icon" class="w-16 h-16 text-primary" />
         <h3 class="text-center text-xl my-4">
           {{  item.title }}
