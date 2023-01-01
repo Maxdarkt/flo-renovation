@@ -41,28 +41,36 @@ export default {
           src: require('@/assets/images/caroussel/baies_vitrees.jpg'),
           alt: 'baie vitrées',
           title: 'Titre 1',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...'
+          description: 'Lorem ipsum dolor sit amet, consectetur ...',
+          isButton: true,
+          buttonText: 'Devis gratuit'
         },
         {
           id: 2,
           src: require('@/assets/images/caroussel/chambre.jpg'),
           alt: 'chambre',
           title: 'Titre 2',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...'
+          description: 'Lorem ipsum dolor sit amet, consectetur ...',
+          isButton: true,
+          buttonText: 'Devis gratuit'
         },
         {
           id: 3,
           src: require('@/assets/images/caroussel/maison_1.jpg'),
           alt: 'Maison',
           title: 'Titre 3',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...'
+          description: 'Lorem ipsum dolor sit amet, consectetur ...',
+          isButton: true,
+          buttonText: 'Devis gratuit'
         },
         {
           id: 4,
           src: require('@/assets/images/caroussel/pool_house.jpg'),
           alt: 'Maison avec piscine',
           title: 'Titre 4',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...'
+          description: 'Lorem ipsum dolor sit amet, consectetur ...',
+          isButton: true,
+          buttonText: 'Devis gratuit'
         },
       ],
       picturesCard: [

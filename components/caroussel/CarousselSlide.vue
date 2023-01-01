@@ -8,12 +8,17 @@
     <!-- The pictures -->
     <div v-for="picture of pictures" :key="picture.id" class="slide absolute top-0 left-0 w-full bottom-0 transform transition-all duration-500 ease-in-out opacity-0">
       <img class="w-full h-full object-cover" :src="picture.src" :alt="picture.alt">
-      <div class="absolute top-1/3 w-[50%] md:w-[30%] h-[30%] mx-[25%] md:mx-[35%] text-white bg-black/50 rounded-md p-4">
+      <div class="absolute top-1/3 w-[50%] md:w-[40%] mx-[25%] md:mx-[30%] text-white bg-black/50 rounded-md p-4">
         <p class="font-semibold text-xl text-center">
           {{ picture.title }}
         </p>
         <p class="text-lg text-left mt-4">
           {{ picture.description }}
+        </p>
+        <p v-if="picture.isButton" class="w-full flex justify-end items-center mt-2">
+          <nuxt-link to="contact" class="btn btn-primary">
+            {{ picture.buttonText }}
+          </nuxt-link>
         </p>
       </div>
     </div>
