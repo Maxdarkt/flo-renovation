@@ -1,7 +1,7 @@
 <template>
   <footer class="relative h-fit mymd:h-32 bg-secondary">
     <div class="w-full h-fit mymd:h-24 text-white text-xs font-light pr-2 flex flex-col mymd:flex-row items-center">
-      <HeaderLogo class="w-56 pt-4"/>
+      <HeaderLogo class="w-60 pt-4" :is-footer="true"/>
       <div class="w-full flex flex-col mymd:flex-row mymd:justify-around items-center mymd:divide-x-2 mymd:divide-gray-200 space-y-4 mymd:space-y-0 my-4 mymd:my-0">
         <div class="w-full mymd:h-8 flex justify-center mymd:items-center">
           <outline-phone-icon class="w-4 h-4 text-primary" />

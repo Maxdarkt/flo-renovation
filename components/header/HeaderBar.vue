@@ -3,7 +3,7 @@
     <!-- navbar -->
     <nav class="nav flex flex-wrap items-end justify-between transition-all duration-300 px-0 pt-4" :class="{'pt-1' : isScrolled}">
       <!-- logo -->
-      <HeaderLogo class="w-52 mr-6 py-1 text-gray-500" :is-scrolled="isScrolled"/>
+      <HeaderLogo class="transition-all duration-500 mr-6 py-1 text-gray-500" :is-scrolled="isScrolled" :class="[ isScrolled ? 'w-60' : 'w-72' ]"/>
       <!-- Responsive Menu checkBox -->
       <input id="menu-btn" class="menu-btn hidden" type="checkbox">
       <label class="menu-icon block cursor-pointer px-2 py-2 relative select-none mr-4" :class="{'hidden' : desktop}" for="menu-btn">
