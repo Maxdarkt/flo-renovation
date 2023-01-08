@@ -15,10 +15,15 @@
         <p class="text-lg text-left mt-4">
           {{ picture.description }}
         </p>
-        <p v-if="picture.isButton" class="w-full flex justify-end items-center mt-2">
+        <p v-if="picture.isLink" class="w-full flex justify-center items-center mt-2">
           <nuxt-link to="contact" class="btn btn-primary">
-            {{ picture.buttonText }}
+            {{ picture.linkText }}
           </nuxt-link>
+        </p>
+        <p v-if="picture.isButton" class="w-full flex justify-center items-center mt-2">
+          <button class="btn btn-primary">
+            {{ picture.buttonText }}
+          </button>
         </p>
       </div>
     </div>

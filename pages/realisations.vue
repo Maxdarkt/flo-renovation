@@ -7,29 +7,35 @@
       :title-color="titleBar.titleColor"
       :description="titleBar.description"
     />
-    <div class="lg:max-w-screen-lg mx-auto flex flex-col sm:flex-row items-center space-x-0 sm:space-x-4 px-2 sm:pl-4 my-8">
-      <div class="form-control">
-        <label class="label cursor-pointer">
-          <span class="w-24 sm:w-20 label-text mr-4">Toutes</span> 
-          <input type="radio" name="radio-10" class="radio checked:bg-primary" checked @click="filterArray('all')" />
+    <div class="max-w-xs sm:max-w-2xl mymd:max-w-[962px] lg:max-w-screen-lg mx-auto flex flex-col mymd:flex-row items-center space-x-0 mymd:space-x-4 px-2 mymd:pl-4 my-8">
+      <div class="w-full">
+        <label class="label justify-start cursor-pointer">
+          <input type="radio" name="radio-10" class="radio checked:bg-primary mr-4" checked @click="filterArray('all')" />
+          <span class="label-text mr-4">Toutes</span> 
         </label>
       </div>
-      <div class="form-control">
-        <label class="label cursor-pointer">
-          <span class="w-24 sm:w-20 label-text mr-4">Neufs</span> 
-          <input type="radio" name="radio-10" class="radio checked:bg-primary" @click="filterArray('news')" />
+      <div class="w-full">
+        <label class="label justify-start cursor-pointer">
+          <input type="radio" name="radio-10" class="radio checked:bg-primary mr-4" @click="filterArray('windows')" />
+          <span class="label-text mr-4">Fenêtres</span> 
         </label>
       </div>
-      <div class="form-control">
-        <label class="label cursor-pointer">
-          <span class="w-24 sm:w-20 label-text mr-4">Rénovations</span> 
-          <input type="radio" name="radio-10" class="radio checked:bg-primary" @click="filterArray('renovation')" />
+      <div class="w-full">
+        <label class="label justify-start cursor-pointer">
+          <input type="radio" name="radio-10" class="radio checked:bg-primary mr-4" @click="filterArray('frontDoor')" />
+          <span class="label-text mr-4">Porte d'entrée</span> 
         </label>
       </div>
-      <div class="form-control">
-        <label class="label cursor-pointer">
-          <span class="w-24 sm:w-20 label-text mr-4">extension</span> 
-          <input type="radio" name="radio-10" class="radio checked:bg-primary" @click="filterArray('extension')" />
+      <div class="w-full">
+        <label class="label justify-start cursor-pointer">
+          <input type="radio" name="radio-10" class="radio checked:bg-primary mr-4" @click="filterArray('garageDoor')" />
+          <span class="label-text mr-4">Porte de garage</span> 
+        </label>
+      </div>
+      <div class="w-full">
+        <label class="label justify-start cursor-pointer">
+          <input type="radio" name="radio-10" class="radio checked:bg-primary mr-4" @click="filterArray('shutters')" />
+          <span class="label-text mr-4">Volets</span> 
         </label>
       </div>
     </div>
@@ -71,131 +77,150 @@ export default {
       realisations: [
         {
           id: 1,
-          src: 'https://placeimg.com/1200/678/arch',
-          alt: 'photo',
-          title: 'Titre 1',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...',
-          category: 'news'
+          src: require('@/assets/images/frontDoor/door_front_1.jpeg'),
+          alt: 'photo porte d\'entrée',
+          title: 'Porte d\'entrée',
+          category: 'frontDoor'
         },
         {
           id: 2,
-          src: 'https://placeimg.com/1200/678/arch',
-          alt: 'photo',
-          title: 'Titre 2',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...',
-          category: 'renovation'
+          src: require('@/assets/images/garageDoor/garage_door_large_wood.jpeg'),
+          alt: 'photo porte de garage',
+          title: 'Porte de garage',
+          category: 'garageDoor'
         },
         {
           id: 3,
-          src: 'https://placeimg.com/1200/678/arch',
-          alt: 'photo',
-          title: 'Titre 3',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...',
-          category: 'renovation'
+          src: require('@/assets/images/frontDoor/door_front_2.jpeg'),
+          alt: 'photo porte d\'entrée',
+          title: 'Porte d\'entrée',
+          category: 'frontDoor'
         },
         {
           id: 4,
-          src: 'https://placeimg.com/1200/678/arch',
-          alt: 'photo',
-          title: 'Titre 4',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...',
-          category: 'extension'
+          src: require('@/assets/images/garageDoor/garage_door_white.jpeg'),
+          alt: 'photo porte de garage',
+          title: 'Porte de garage',
+          category: 'garageDoor'
         },
         {
           id: 5,
-          src: 'https://placeimg.com/1200/678/arch',
-          alt: 'photo',
-          title: 'Titre 5',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...',
-          category: 'news'
+          src: require('@/assets/images/shutters/shutters_bso_2.jpeg'),
+          alt: 'photo bso',
+          title: 'BSO',
+          category: 'shutters'
         },
         {
           id: 6,
-          src: 'https://placeimg.com/1200/678/arch',
-          alt: 'photo',
-          title: 'Titre 6',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...',
-          category: 'extension'
+          src: require('@/assets/images/frontDoor/door_front_3.jpeg'),
+          alt: 'photo porte d\'entrée',
+          title: 'Porte d\'entrée',
+          category: 'frontDoor'
         },
         {
           id: 7,
-          src: 'https://placeimg.com/1200/678/arch',
-          alt: 'photo',
-          title: 'Titre 7',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...',
-          category: 'news'
+          src: require('@/assets/images/frontDoor/door_front_4.jpeg'),
+          alt: 'photo porte d\'entrée',
+          title: 'Porte d\'entrée',
+          category: 'frontDoor'
         },
         {
           id: 8,
-          src: 'https://placeimg.com/1200/678/arch',
-          alt: 'photo',
-          title: 'Titre 8',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...',
-          category: 'renovation'
+          src: require('@/assets/images/garageDoor/garage_door_white_2.jpeg'),
+          alt: 'photo porte de garage',
+          title: 'Porte de garage',
+          category: 'garageDoor'
         },
         {
           id: 9,
-          src: 'https://placeimg.com/1200/678/arch',
-          alt: 'photo',
-          title: 'Titre 9',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...',
-          category: 'news'
+          src: require('@/assets/images/frontDoor/door_front_5.jpeg'),
+          alt: 'photo porte d\'entrée',
+          title: 'Porte d\'entrée',
+          category: 'frontDoor'
         },
         {
           id: 10,
-          src: 'https://placeimg.com/1200/678/arch',
-          alt: 'photo',
-          title: 'Titre 10',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...',
-          category: 'news'
+          src: require('@/assets/images/frontDoor/door_front_6.jpeg'),
+          alt: 'photo porte d\'entrée',
+          title: 'Porte d\'entrée',
+          category: 'frontDoor'
         },
         {
           id: 11,
-          src: 'https://placeimg.com/1200/678/arch',
-          alt: 'photo',
-          title: 'Titre 11',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...',
-          category: 'renovation'
+          src: require('@/assets/images/garageDoor/garage_door_wood.jpeg'),
+          alt: 'photo porte de garage',
+          title: 'Porte de garage',
+          category: 'garageDoor'
         },
         {
           id: 12,
-          src: 'https://placeimg.com/1200/678/arch',
-          alt: 'photo',
-          title: 'Titre 12',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...',
-          category: 'news'
+          src: require('@/assets/images/shutters/shutters_bso.jpeg'),
+          alt: 'photo bso',
+          title: 'BSO',
+          category: 'shutters'
         },
         {
           id: 13,
-          src: 'https://placeimg.com/1200/678/arch',
-          alt: 'photo',
-          title: 'Titre 13',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...',
-          category: 'renovation'
+          src: require('@/assets/images/frontDoor/door_front_7_before.jpeg'),
+          alt: 'photo porte d\'entrée',
+          title: 'Porte d\'entrée',
+          category: 'frontDoor'
         },
         {
           id: 14,
-          src: 'https://placeimg.com/1200/678/arch',
-          alt: 'photo',
-          title: 'Titre 14',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...',
-          category: 'extension'
+          src: require('@/assets/images/frontDoor/door_front_7_after.jpeg'),
+          alt: 'photo porte d\'entrée',
+          title: 'Porte d\'entrée',
+          category: 'frontDoor'
         },
         {
           id: 15,
-          src: 'https://placeimg.com/1200/678/arch',
-          alt: 'photo',
-          title: 'Titre 15',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...',
-          category: 'renovation'
+          src: require('@/assets/images/shutters/shutters_renovation_opened.jpeg'),
+          alt: 'photo volets roulants',
+          title: 'Volets roulants',
+          category: 'shutters'
         },
         {
           id: 16,
-          src: 'https://placeimg.com/1200/678/arch',
-          alt: 'photo',
-          title: 'Titre 16',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...',
-          category: 'extension'
+          src: require('@/assets/images/shutters/shutters_renovation_closed.jpeg'),
+          alt: 'photo volets roulants',
+          title: 'Volets roulants',
+          category: 'shutters'
+        },
+        {
+          id: 17,
+          src: require('@/assets/images/frontDoor/door_front_8.jpeg'),
+          alt: 'photo porte d\'entrée',
+          title: 'Porte d\'entrée',
+          category: 'frontDoor'
+        },
+        {
+          id: 18,
+          src: require('@/assets/images/shutters/shutters_renovation_solar_opened.jpeg'),
+          alt: 'photo volets roulants',
+          title: 'Volets roulants',
+          category: 'shutters'
+        },
+        {
+          id: 19,
+          src: require('@/assets/images/shutters/shutters_renovation_solar_closed.jpeg'),
+          alt: 'photo volets roulants',
+          title: 'Volets roulants',
+          category: 'shutters'
+        },
+        {
+          id: 20,
+          src: require('@/assets/images/shutters/shutters_renovation_solar_2.jpeg'),
+          alt: 'photo volets roulants',
+          title: 'Volets roulants',
+          category: 'shutters'
+        },
+        {
+          id: 21,
+          src: require('@/assets/images/shutters/shutters_renovation_wood.jpeg'),
+          alt: 'photo volets roulants',
+          title: 'Volets roulants',
+          category: 'shutters'
         }
       ],
       titleBar: {

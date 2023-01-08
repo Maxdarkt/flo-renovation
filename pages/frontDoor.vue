@@ -35,49 +35,57 @@
 
 <script>
 export default {
-  name: 'RenovationPage',
+  name: 'FrontDoorPage',
   data() {
     return {
       picturesSlide: [
         {
           id: 1,
-          src: require('@/assets/images/caroussel/baies_vitrees.jpg'),
-          alt: 'baie vitrées',
-          title: 'Titre 1',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...'
+          src: require('@/assets/images/frontDoor/door_front_3.jpeg'),
+          alt: 'Porte d\'entrée',
+          title: 'Porte d\'entrée',
+          isLink: true,
+          linkText: 'DEVIS GRATUIT',
+          to: 'contact'
         },
         {
           id: 2,
-          src: require('@/assets/images/caroussel/chambre.jpg'),
-          alt: 'chambre',
-          title: 'Titre 2',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...'
+          src: require('@/assets/images/frontDoor/door_front_2.jpeg'),
+          alt: 'Porte d\'entrée',
+          title: 'Porte d\'entrée',
+          isLink: true,
+          linkText: 'DEVIS GRATUIT',
+          to: 'contact'
         },
         {
           id: 3,
-          src: require('@/assets/images/caroussel/maison_1.jpg'),
-          alt: 'Maison',
-          title: 'Titre 3',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...'
+          src: require('@/assets/images/frontDoor/door_front_8.jpeg'),
+          alt: 'Porte d\'entrée',
+          title: 'Porte d\'entrée',
+          isLink: true,
+          linkText: 'DEVIS GRATUIT',
+          to: 'contact'
         },
         {
           id: 4,
-          src: require('@/assets/images/caroussel/pool_house.jpg'),
-          alt: 'Maison avec piscine',
-          title: 'Titre 4',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...'
-        },
+          src: require('@/assets/images/frontDoor/door_front_6.jpeg'),
+          alt: 'Porte d\'entrée',
+          title: 'Porte d\'entrée',
+          isLink: true,
+          linkText: 'DEVIS GRATUIT',
+          to: 'contact'
+        }
       ],
       titleBar: {
         isPicture: false,
         src: require('@/assets/images/background/renovation.jpg'),
-        title: 'Rénovation',
+        title: 'Portes d\'entrée',
         description: 'Corrupti amet asperiores, totam quam consequatur voluptatem quos perferendis.'
       }
     }
   },
   head: {
-    title: 'Rénovation',
+    title: 'Portes d\'entrée',
   }
 }
 </script>

@@ -35,49 +35,57 @@
 
 <script>
 export default {
-  name: 'ExtensionPage',
+  name: 'GarageDoorPage',
   data() {
     return {
       picturesSlide: [
         {
           id: 1,
-          src: require('@/assets/images/caroussel/baies_vitrees.jpg'),
-          alt: 'baie vitrées',
-          title: 'Titre 1',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...'
+          src: require('@/assets/images/garageDoor/garage_door_large_wood.jpeg'),
+          alt: 'Porte de garage',
+          title: 'Porte de garage 5ml',
+          isLink: true,
+          linkText: 'DEVIS GRATUIT',
+          to: 'contact'
         },
         {
           id: 2,
-          src: require('@/assets/images/caroussel/chambre.jpg'),
-          alt: 'chambre',
-          title: 'Titre 2',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...'
+          src: require('@/assets/images/garageDoor/garage_door_wood.jpeg'),
+          alt: 'Porte de garage',
+          title: 'Porte de garage aspect bois',
+          isLink: true,
+          linkText: 'DEVIS GRATUIT',
+          to: 'contact'
         },
         {
           id: 3,
-          src: require('@/assets/images/caroussel/maison_1.jpg'),
-          alt: 'Maison',
-          title: 'Titre 3',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...'
+          src: require('@/assets/images/garageDoor/garage_door_white.jpeg'),
+          alt: 'Porte de garage',
+          title: 'Porte de garage',
+          isLink: true,
+          linkText: 'DEVIS GRATUIT',
+          to: 'contact'
         },
         {
           id: 4,
-          src: require('@/assets/images/caroussel/pool_house.jpg'),
-          alt: 'Maison avec piscine',
-          title: 'Titre 4',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...'
+          src: require('@/assets/images/garageDoor/garage_door_white_2.jpeg'),
+          alt: 'Porte de garage',
+          title: 'Porte de garage',
+          isLink: true,
+          linkText: 'DEVIS GRATUIT',
+          to: 'contact'
         }
       ],
       titleBar: {
         isPicture: false,
-        src: 'https://placeimg.com/1400/400/arch',
-        title: 'Extension',
+        src: require('@/assets/images/background/renovation.jpg'),
+        title: 'Portes de garage',
         description: 'Corrupti amet asperiores, totam quam consequatur voluptatem quos perferendis.'
       }
     }
   },
   head: {
-    title: 'Extension',
+    title: 'Portes de garage',
   }
 }
 </script>

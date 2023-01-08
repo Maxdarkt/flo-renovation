@@ -1,25 +1,31 @@
 <template>
-  <div class="card bg-white shadow-xl">
-  <figure v-if="src"><img :src="src" :alt="alt" /></figure>
-  <div class="card-body">
-    <h2 class="card-title flex flex-col items-start">
-      {{ title }}
-      <span class="h-2 border-b-2 border-primary w-8"></span>
-    </h2>
-    <p>
-      {{ text }}
-    </p>
-    <div v-if="isBtn" class="card-actions justify-end">
-      <button class="btn btn-primary">
-        {{ btnText }}
-      </button>
+  <div class="card relative w-full h-full shadow-xl rounded-lg overflow-hidden">
+    <div 
+      v-if="src"
+      :style="{
+        backgroundImage: `url(${src})`
+      }"
+      class="w-full h-[50%] sm:h-[60%] bg-cover bg-center bg-no-repeat"
+    >
     </div>
-    <div v-else-if="isLink" class="card-actions justify-end">
-      <nuxt-link :to="to" class="btn btn-primary">
-        {{ linkText }}
-      </nuxt-link>
+    <div class="flex flex-col justify-around p-5" :class="[src ? 'h-[50%] sm:h-[40%]' : 'h-full']">
+        <h5 class="mt-4 text-lg sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          {{ title }}
+        </h5>
+        <p class="mt-4 font-normal text-gray-700 dark:text-gray-400">
+          {{ text }}
+        </p>
+        <div v-if="isBtn" class="flex justify-end mt-4">
+        <button class="btn btn-primary">
+          {{ btnText }}
+        </button>
+      </div>
+      <div v-else-if="isLink" class="flex justify-end mt-4">
+        <nuxt-link :to="to" class="btn btn-primary">
+          {{ linkText }}
+        </nuxt-link>
+      </div>
     </div>
-  </div>
 </div>
 </template>
 

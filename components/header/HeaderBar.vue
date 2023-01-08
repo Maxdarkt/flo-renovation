@@ -13,44 +13,54 @@
       <div class="menu-nav border-b lg:border-none flex justify-end items-end list-reset m-0 w-full lg:w-auto relative lg:flex lg:top-auto lg:mr-4 -top-1">
         <!-- links ACCUEIL -->
         <span @click="menuItem()">
-          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-primary transition duration-500 border-b border-transparent lg:hover:border-primary font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="/">
-            ACCUEIL
+          <nuxt-link class="flex items-end px-2 py-2 no-underline text-gray-500 hover:text-primary transition duration-500 border-b border-transparent lg:hover:border-primary font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="/">
+            <outline-home-icon class="w-8 h-8" />
+            <!-- ACCUEIL -->
           </nuxt-link>
         </span>
-        <!-- links NEUF -->
+        <!-- links WINDOWS -->
         <span class="block border-t lg:border-none" @click="menuItem()">
-          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent lg:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="neuf">
-            NEUF
+          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent lg:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="windows">
+            FENETRES
           </nuxt-link>
         </span>
-        <!-- links RENOVATION -->
+        <!-- links DOOR -->
         <span class="block border-t lg:border-none" @click="menuItem()">
-          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent lg:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="renovation">
-            RENOVATION
+          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent lg:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="frontDoor">
+            PORTES D'ENTREE
           </nuxt-link>
         </span>
-        <!-- links EXTENSION -->
+        <!-- links SHUTTERS -->
         <span class="block border-t lg:border-none" @click="menuItem()">
-          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent lg:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="extension">
-            EXTENSION
+          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent lg:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="shutters">
+            VOLETS
+          </nuxt-link>
+        </span>
+        <!-- links GARAGE DOOR -->
+        <span class="block border-t lg:border-none" @click="menuItem()">
+          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent lg:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="garageDoor">
+            PORTES DE GARAGE
           </nuxt-link>
         </span>
         <!-- links SOCIETE -->
         <span class="block border-t lg:border-none" @click="menuItem()">
-          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent lg:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="societe">
-            SOCIETE
+          <nuxt-link class="flex items-end px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent lg:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="company">
+            <outline-information-circle-icon class="w-8 h-8" />
+            <!-- SOCIETE -->
           </nuxt-link>
         </span>
         <!-- links REALISATIONS -->
         <span class="block border-t lg:border-none" @click="menuItem()">
-          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent lg:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="realisations">
-            REALISATIONS
+          <nuxt-link class="flex items-end px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent lg:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="realisations">
+            <outline-view-grid-icon class="w-8 h-8" />
+            <!-- REALISATIONS -->
           </nuxt-link>
         </span>
         <!-- links CONTACT -->
         <span class="block border-t lg:border-none" @click="menuItem()">
-          <nuxt-link class="block lg:inline-block px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent lg:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="contact">
-            CONTACT
+          <nuxt-link class="flex items-end px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent lg:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="contact">
+            <outline-mail-icon class="w-8 h-8" />
+            <!-- CONTACT -->
           </nuxt-link>
         </span>
       </div>  

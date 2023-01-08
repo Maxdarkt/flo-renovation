@@ -8,8 +8,8 @@
         <outline-x-icon class="w-8 h-8 text-white transition duration-300 hover:scale-125" />
       </button>
     </div>
-    <div class="max-w-4xl w-full h-full flex justify-center items-center">
-      <img :src="currentPicture" :alt="currentAlt" class="w-full h-auto rounded-md" />
+    <div class="max-w-4xl w-full h-[calc(h-full-h-40)] flex justify-center items-center">
+      <img :src="currentPicture" :alt="currentAlt" class="rounded-md" />
     </div>
     <div class="w-full bg-black h-20 flex justify-center items-center">
       <p :class="[currentDescription ? 'text-lg' : 'text-xl']">

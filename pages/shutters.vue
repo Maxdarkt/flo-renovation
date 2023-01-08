@@ -24,8 +24,8 @@
           </p>
         </div>
         <CarousselSlide 
-          class="rounded-md"
-          :pictures="picturesSlide"
+        class="rounded-md"
+        :pictures="picturesSlide"
         />
       </div>
     </div>
@@ -35,49 +35,57 @@
 
 <script>
 export default {
-  name: 'NeufPage',
+  name: 'ShuttersPage',
   data() {
     return {
       picturesSlide: [
         {
           id: 1,
-          src: require('@/assets/images/caroussel/baies_vitrees.jpg'),
-          alt: 'baie vitrées',
-          title: 'Titre 1',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...'
+          src: require('@/assets/images/shutters/shutters_bso.jpeg'),
+          alt: 'BSO',
+          title: 'BSO',
+          isLink: true,
+          linkText: 'DEVIS GRATUIT',
+          to: 'contact'
         },
         {
           id: 2,
-          src: require('@/assets/images/caroussel/chambre.jpg'),
-          alt: 'chambre',
-          title: 'Titre 2',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...'
+          src: require('@/assets/images/shutters/shutters_renovation_closed.jpeg'),
+          alt: 'volets roulants',
+          title: 'Volets roulants rénovation',
+          isLink: true,
+          linkText: 'DEVIS GRATUIT',
+          to: 'contact'
         },
         {
           id: 3,
-          src: require('@/assets/images/caroussel/maison_1.jpg'),
-          alt: 'Maison',
-          title: 'Titre 3',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...'
+          src: require('@/assets/images/shutters/shutters_renovation_solar_2.jpeg'),
+          alt: 'volets roulants',
+          title: 'Volets roulants solaires',
+          isLink: true,
+          linkText: 'DEVIS GRATUIT',
+          to: 'contact'
         },
         {
           id: 4,
-          src: require('@/assets/images/caroussel/pool_house.jpg'),
-          alt: 'Maison avec piscine',
-          title: 'Titre 4',
-          description: 'Lorem ipsum dolor sit amet, consectetur ...'
-        },
+          src: require('@/assets/images/shutters/shutters_renovation_wood.jpeg'),
+          alt: 'volets roulants aspect bois',
+          title: 'Volets roulants',
+          isLink: true,
+          linkText: 'DEVIS GRATUIT',
+          to: 'contact'
+        }
       ],
       titleBar: {
         isPicture: false,
         src: 'https://placeimg.com/1400/400/arch',
-        title: 'Neuf',
+        title: 'Volets',
         description: 'Corrupti amet asperiores, totam quam consequatur voluptatem quos perferendis.'
       }
     }
   },
   head: {
-    title: 'Neuf',
+    title: 'Volets',
   }
 }
 </script>

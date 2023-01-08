@@ -6,7 +6,7 @@
       :style="{
         backgroundImage: `url(${src})`
       }"
-      class="group w-full h-full bg-cover bg-center bg-no-repeat scale-110 grayscale translate-all duration-500 group-hover:scale-100 group-hover:grayscale-0" 
+      class="group w-full h-full bg-cover bg-center bg-no-repeat scale-110 translate-all duration-500 group-hover:scale-100" 
     ></div>
     <div class="absolute bottom-0 left-0 right-0 h-fit bg-black/70 text-white flex flex-col justify-center items-center">
       <h4 class="w-full font-medium transition duration-500 group-hover:text-primary pt-2 px-2" :class="[description ? 'text-left' : 'text-center']">
