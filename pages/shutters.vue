@@ -11,7 +11,7 @@
       <div class="flex flex-col md:flex-row space-y-14 md:space-y-0 px-4">
         <div class="w-full text-justify pr-4">
           <p class="mt-8">
-            Flo rénovation vous propose diffférents modèles de volets :
+            Flo rénovation vous propose différents modèles de volets :
             <ul>
               <li class="disc">
                 Volets roulants (en alumiunm, PVC)
