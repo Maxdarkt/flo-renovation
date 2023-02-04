@@ -3,6 +3,7 @@
     <CarousselSlide 
       :pictures="picturesSlide"
     />
+    <BannerQualityHome />
     <div class="lg:max-w-screen-lg grid grid-cols-12 xxs:gap-8 md:gap-12 justify-center items-center px-4 mt-12 mb-24 mx-auto">
       <div class="col-span-12 px-4 lg:px-10">
         <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl">

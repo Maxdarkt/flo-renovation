@@ -221,6 +221,34 @@ export default {
           alt: 'photo volets roulants',
           title: 'Volets roulants',
           category: 'shutters'
+        },
+        {
+          id: 22,
+          src: require('@/assets/images/windows/window_new_1.jpg'),
+          alt: 'Projet Neuf',
+          title: 'Fenêtres',
+          category: 'windows'
+        },
+        {
+          id: 23,
+          src: require('@/assets/images/windows/window_new_2.jpg'),
+          alt: 'Projet Neuf',
+          title: 'Fenêtres',
+          category: 'windows'
+        },
+        {
+          id: 24,
+          src: require('@/assets/images/windows/window_new_3.jpg'),
+          alt: 'Projet Neuf',
+          title: 'Fenêtres',
+          category: 'windows'
+        },
+        {
+          id: 25,
+          src: require('@/assets/images/windows/windows_coulissant_2.jpg'),
+          alt: 'Menuiserie Coulissant',
+          title: 'Fenêtres',
+          category: 'windows'
         }
       ],
       titleBar: {

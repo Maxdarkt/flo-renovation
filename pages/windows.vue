@@ -35,36 +35,36 @@ export default {
       picturesSlide: [
         {
           id: 1,
-          src: require('@/assets/images/caroussel/baies_vitrees.jpg'),
-          alt: 'baie vitrées',
-          title: 'Titre 1',
+          src: require('@/assets/images/windows/window_new_1.jpg'),
+          alt: 'Menuiseries chantier neuf',
+          title: 'Projet Neuf',
           isLink: true,
           linkText: 'Devis gratuit',
           to: 'contact'
         },
         {
           id: 2,
-          src: require('@/assets/images/caroussel/chambre.jpg'),
-          alt: 'chambre',
-          title: 'Titre 2',
+          src: require('@/assets/images/windows/window_new_2.jpg'),
+          alt: 'Menuiseries chantier neuf',
+          title: 'Projet Neuf',
           isLink: true,
           linkText: 'Devis gratuit',
           to: 'contact'
         },
         {
           id: 3,
-          src: require('@/assets/images/caroussel/maison_1.jpg'),
-          alt: 'Maison',
-          title: 'Titre 3',
+          src: require('@/assets/images/windows/window_new_3.jpg'),
+          alt: 'Menuiseries chantier neuf',
+          title: 'Projet Neuf',
           isLink: true,
           linkText: 'Devis gratuit',
           to: 'contact'
         },
         {
           id: 4,
-          src: require('@/assets/images/caroussel/pool_house.jpg'),
-          alt: 'Maison avec piscine',
-          title: 'Titre 4',
+          src: require('@/assets/images/windows/windows_coulissant_2.jpg'),
+          alt: 'Menuiseries coulissant',
+          title: 'Coulissant',
           isLink: true,
           linkText: 'Devis gratuit',
           to: 'contact'

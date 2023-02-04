@@ -3,7 +3,7 @@
     <!-- navbar -->
     <nav class="nav flex flex-wrap items-center justify-between transition-all duration-300 px-0 pt-4" :class="{'pt-1' : isScrolled}">
       <!-- logo -->
-      <HeaderLogo class="transition-all duration-500 mr-6 py-1 text-gray-500" :is-scrolled="isScrolled" :class="[ isScrolled ? 'w-48 xs:w-60' : 'w-60 xs:w-72' ]"/>
+      <HeaderLogo class="transition-all duration-500 mr-6 py-1 text-gray-500" :is-scrolled="isScrolled" :class="[ isScrolled ? 'w-48 xs:w-[16rem]' : 'w-60 xs:w-[20rem]' ]"/>
       <!-- Responsive Menu checkBox -->
       <input id="menu-btn" class="menu-btn hidden" type="checkbox">
       <label class="menu-icon block cursor-pointer px-2 py-2 relative select-none sm:mr-4" :class="{'hidden' : desktop}" for="menu-btn">
@@ -22,10 +22,10 @@
           <div class="dropdown dropdown-hover">
             <label tabindex="0" class="block mymd:inline-block px-2 py-2 no-underline text-gray-500 font-bold cursor-pointer">PRODUITS</label>
             <ul tabindex="0" class="dropdown-content p-4 shadow bg-base-100 rounded-box w-52 space-y-4">
-              <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" to="windows">FENETRES</nuxt-link></li> 
-              <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" to="frontDoor">PORTES D'ENTREE</nuxt-link></li>
-              <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" to="shutters">VOLETS</nuxt-link></li>
-              <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" to="garageDoor">PORTES DE GARAGE</nuxt-link></li>
+              <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="windows">FENETRES</nuxt-link></li> 
+              <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="frontDoor">PORTES D'ENTREE</nuxt-link></li>
+              <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="shutters">VOLETS</nuxt-link></li>
+              <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="garageDoor">PORTES DE GARAGE</nuxt-link></li>
             </ul>
           </div>
         </span>
