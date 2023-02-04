@@ -3,12 +3,23 @@
     <CarousselSlide 
       :pictures="picturesSlide"
     />
-    <div class="max-w-screen-lg grid grid-cols-12 gap-8 md:gap-12 justify-center items-center px-4 my-24 mx-auto">
+    <div class="lg:max-w-screen-lg grid grid-cols-12 xxs:gap-8 md:gap-12 justify-center items-center px-4 mt-12 mb-24 mx-auto">
+      <div class="col-span-12 px-4 lg:px-10">
+        <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl">
+          Réalisé par <span class="text-primary font-medium mt-16">Flo Rénovation</span>
+        </h2>
+        <div class="px-24 mt-8">
+          <div class="bg-[url('@/assets/images/home.jpg')] bg-top bg-cover h-[300px] xxs:h-[350px] xs:h-[400px] sm:h-[500px] md:h-[600px] w-full rounded-md shadow-2xl"></div>
+        </div>
+      </div>
+      <h2 class="col-span-12 text-lg sm:text-xl md:text-2xl lg:text-3xl px-4">
+        Les activités de <span class="text-primary font-medium mt-16">Flo Rénovation</span>
+      </h2>
       <div
         v-for="item of picturesCard"
         :id="`card-${item.id}`"
         :key="item.id"
-        class="col-span-12 md:col-span-6 flex justify-center h-[400px] sm:h-[500px]"
+        class="col-span-12 md:col-span-6 flex justify-center h-[400px] sm:h-[500px] mt-A"
       >
         <CardVertImgDesc 
           :id="`CardVertImgDesc-${item.id}`"
@@ -27,7 +38,6 @@
       </div>
     </div>
     <BannerStrongPoint />
-    <!-- <BannerRealisation /> -->
     <CarousselMultiplesPictures />
   </div>
 </template>
@@ -50,32 +60,36 @@ export default {
           src: require('@/assets/images/caroussel/accueil_salon.jpeg'),
           alt: 'salon avec baies vitrées',
           title: 'Fenêtres',
-          isButton: true,
-          buttonText: 'Devis gratuit'
+          isLink: true,
+          linkText: 'Devis gratuit',
+          to: 'contact'
         },
         {
           id: 2,
           src: require('@/assets/images/caroussel/accueil_entree.jpeg'),
           alt: 'accueil porte entrée intérieur',
           title: 'Porte d\'entrée',
-          isButton: true,
-          buttonText: 'Devis gratuit'
+          isLink: true,
+          linkText: 'Devis gratuit',
+          to: 'contact'
         },
         {
           id: 3,
           src: require('@/assets/images/caroussel/accueil_maison.jpeg'),
           alt: 'Maison extérieur',
           title: 'Volets roulants',
-          isButton: true,
-          buttonText: 'Devis gratuit'
+          isLink: true,
+          linkText: 'Devis gratuit',
+          to: 'contact'
         },
         {
           id: 4,
           src: require('@/assets/images/caroussel/accueil_garage.jpeg'),
           alt: 'maison extérieur garage',
           title: 'Porte de garage',
-          isButton: true,
-          buttonText: 'Devis gratuit'
+          isLink: true,
+          linkText: 'Devis gratuit',
+          to: 'contact'
         }
       ],
       picturesCard: [
@@ -85,6 +99,7 @@ export default {
           alt: 'Photo de fenêtres',
           title: 'Fenêtres',
           text: 'Découvrir notre gamme fenêtres et coulissants.',
+          isBtn: false,
           isLink: true,
           linkText: 'En savoir +',
           to: 'windows'
@@ -95,6 +110,7 @@ export default {
           alt: 'Photo porte entrée intérieur',
           title: 'Porte d\'entrée',
           text: 'Découvrir notre gamme porte d\'entrée.',
+          isBtn: false,
           isLink: true,
           linkText: 'En savoir +',
           to: 'frontDoor'
@@ -105,6 +121,7 @@ export default {
           alt: 'Photo volets bso gris anthracite',
           title: 'BSO (RAL7071)',
           text: 'Découvrir notre gamme volets roulants, BSO.',
+          isBtn: false,
           isLink: true,
           linkText: 'En savoir +',
           to: 'shutters'
@@ -115,6 +132,7 @@ export default {
           alt: 'photo porte de garage blanche',
           title: 'Porte de garage',
           text: 'Découvrir notre gamme sur les portes de garage.',
+          isBtn: false,
           isLink: true,
           linkText: 'En savoir +',
           to: 'garageDoor'

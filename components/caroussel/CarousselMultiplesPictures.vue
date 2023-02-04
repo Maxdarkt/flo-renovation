@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full py-8 px-8 mb-16 flex flex-col items-center">
+  <div class="w-full py-8 px-1 xxspx-4 xs:px-8 mb-16 flex flex-col items-center">
     <h2 class="text-3xl text-center">
       Nos réalisations
     </h2>

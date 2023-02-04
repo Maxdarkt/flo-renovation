@@ -15,15 +15,12 @@
           </h2>
           <div class="h-2 border-b-2 border-primary my-4 w-32"></div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis expedita nihil veniam incidunt ut ipsam, inventore numquam similique odio a eaque voluptatem aliquid voluptas illo id quos excepturi assumenda unde.
+            Fort d'une quinzaine d'années d'expériences, <span class="text-primary font-medium">Flo Rénovation</span> vous propose ses services pour la pose de menuiserie dans un rayon de 50 Km.
           </p>
-          <p>
-            Non mollitia officia iusto hic reprehenderit nulla porro pariatur dolores dolorem commodi, repellendus sit reiciendis, dignissimos illum deserunt? Enim assumenda dolor consectetur amet alias quo aliquid ducimus distinctio. Optio, pariatur!
+          <p class="mt-8">
+            <span class="text-primary font-medium">Flo Rénovation</span> intervient aussi bien sur des projets de rénovation complète, dans un contexte d'amélioration énergétique ou sur des projets neufs.
           </p>
-          <p>
-            Nam amet, reiciendis debitis fuga consequuntur quod facilis facere eaque harum porro voluptate eos labore iusto perferendis laboriosam ut libero necessitatibus rem quaerat, est ex minima? Suscipit, tempore aliquam. Voluptatibus.
-          </p>
-          <div class="self-end mt-4">
+          <div class="self-end mt-16">
             <nuxt-link to="contact" class="btn btn-primary">Devis gratuit</nuxt-link>
           </div>
         </div>
@@ -47,15 +44,9 @@
             QUI SOMMES-NOUS ?
           </h2>
           <div class="h-2 border-b-2 border-primary my-4 w-32"></div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis expedita nihil veniam incidunt ut ipsam, inventore numquam similique odio a eaque voluptatem aliquid voluptas illo id quos excepturi assumenda unde.
-          </p>
-          <p>
-            Non mollitia officia iusto hic reprehenderit nulla porro pariatur dolores dolorem commodi, repellendus sit reiciendis, dignissimos illum deserunt? Enim assumenda dolor consectetur amet alias quo aliquid ducimus distinctio. Optio, pariatur!
-          </p>
-          <p>
-            Nam amet, reiciendis debitis fuga consequuntur quod facilis facere eaque harum porro voluptate eos labore iusto perferendis laboriosam ut libero necessitatibus rem quaerat, est ex minima? Suscipit, tempore aliquam. Voluptatibus.
-          </p>
+            <p class="mt-8">
+              Voici l'équipe de professionnels de <span class="text-primary font-medium">Flo Rénovation</span> qui intervient dans la réussite de vos projets.
+            </p>
           <div class="self-end mt-4">
             <nuxt-link to="contact" class="btn btn-primary">Contactez-nous</nuxt-link>
           </div>
@@ -95,18 +86,18 @@ export default {
       currentTitle: null,
       currentDescription: null,
       titleBar: {
-        isPicture: true,
+        isPicture: false,
         src: require('@/assets/images/background/societe.jpg'),
         title: 'Société',
         titleColor: 'text-primary',
-        description: 'Corrupti amet asperiores, totam quam consequatur voluptatem quos perferendis.'
+        description: 'VOUS SOUHAITEZ EN SAVOIR PLUS ?'
       },
       pictures: [
         {
           id: 1,
-          src: 'https://placeimg.com/1200/678/arch',
+          src: require('@/assets/images/home.jpg'),
           alt: 'chantier de rénovation',
-          title: 'Rénovation'
+          title: 'Maison Neuve'
         },
         {
           id: 2,

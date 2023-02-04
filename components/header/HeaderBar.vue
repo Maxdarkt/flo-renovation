@@ -1,12 +1,12 @@
 <template>
   <header id="header" class="h-[6rem] bg-white fixed w-screen shadow-lg z-30 transition-all duration-300" :class="{'h-[4rem]' : isScrolled}">
     <!-- navbar -->
-    <nav class="nav flex flex-wrap items-end justify-between transition-all duration-300 px-0 pt-4" :class="{'pt-1' : isScrolled}">
+    <nav class="nav flex flex-wrap items-center justify-between transition-all duration-300 px-0 pt-4" :class="{'pt-1' : isScrolled}">
       <!-- logo -->
-      <HeaderLogo class="transition-all duration-500 mr-6 py-1 text-gray-500" :is-scrolled="isScrolled" :class="[ isScrolled ? 'w-60' : 'w-72' ]"/>
+      <HeaderLogo class="transition-all duration-500 mr-6 py-1 text-gray-500" :is-scrolled="isScrolled" :class="[ isScrolled ? 'w-48 xs:w-60' : 'w-60 xs:w-72' ]"/>
       <!-- Responsive Menu checkBox -->
       <input id="menu-btn" class="menu-btn hidden" type="checkbox">
-      <label class="menu-icon block cursor-pointer px-2 py-2 relative select-none mr-4" :class="{'hidden' : desktop}" for="menu-btn">
+      <label class="menu-icon block cursor-pointer px-2 py-2 relative select-none sm:mr-4" :class="{'hidden' : desktop}" for="menu-btn">
         <span class="navicon bg-grey-darkest flex items-center relative"></span>
       </label>
       <!-- Navigation links -->
@@ -45,22 +45,22 @@
         <!-- links SOCIETE -->
         <span class="block border-t lg:border-none" @click="menuItem()">
           <nuxt-link class="flex items-end px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent lg:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="company">
-            <outline-information-circle-icon class="w-8 h-8" />
-            <!-- SOCIETE -->
+            <!-- <outline-information-circle-icon class="w-8 h-8" /> -->
+            SOCIETE
           </nuxt-link>
         </span>
         <!-- links REALISATIONS -->
         <span class="block border-t lg:border-none" @click="menuItem()">
           <nuxt-link class="flex items-end px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent lg:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="realisations">
-            <outline-view-grid-icon class="w-8 h-8" />
-            <!-- REALISATIONS -->
+            <!-- <outline-view-grid-icon class="w-8 h-8" /> -->
+            REALISATIONS
           </nuxt-link>
         </span>
         <!-- links CONTACT -->
         <span class="block border-t lg:border-none" @click="menuItem()">
           <nuxt-link class="flex items-end px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent lg:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary lg:border-primary font-bold" to="contact">
-            <outline-mail-icon class="w-8 h-8" />
-            <!-- CONTACT -->
+            <!-- <outline-mail-icon class="w-8 h-8" /> -->
+            CONTACT
           </nuxt-link>
         </span>
       </div>  

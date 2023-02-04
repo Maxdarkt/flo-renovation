@@ -1,6 +1,6 @@
 <template>
   <!-- Implement the carousel -->
-  <div class="relative w-full h-[500px] overflow-hidden">
+  <div class="relative w-full h-[500px] md:h-[575px] mymd:h-[650px] lg:h-[700px] overflow-hidden">
     <!-- The dots -->
     <div class="absolute right-0 bottom-0 left-0 flex justify-center p-0 space-x-5 z-10 w-full px-5 py-3 bg-black/40">
       <div v-for="picture of pictures" :key="picture.id" class="dot w-3 h-3 rounded-full cursor-pointer" @click="currentSlide(picture.id)"></div>

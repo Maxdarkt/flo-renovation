@@ -20,7 +20,7 @@
         <p class="text-lg font-medium my-4">
           Informations éditeur
         </p>
-        <p class="text-lg font-medium">
+        <p class="text-lg text-primary font-medium">
           Flo Rénovation
         </p>
         <ul>
@@ -34,28 +34,28 @@
             Tél : +33 (0)6 33 77 78 77
           </li>
           <li>
-            Web : https://www.flo-renovation.fr
+            Web : https://flo-renovation.fr
           </li>
           <li>
-            Raison sociale : Flo Rénovation
+            Raison sociale : <span class="text-primary font-medium">Flo Rénovation</span>
           </li>
           <li>
-            Forme Juridique : XXXX
+            Forme Juridique : EURL
           </li>
           <li>
-            Email : contact@flo-renovation.fr
+            Email : <span class="text-primary font-medium">contact@flo-renovation.fr</span>
           </li>
           <li>
-            RCS : Annecy, N° Siren 000 000 000
+            RCS : Annecy, N° Siren 824 882 310 00017
           </li>
           <li>
-            Capital social : X.XXX € euros
+            Capital social : 10000 euros
           </li>
           <li>
-            N° TVA : FR00000000
+            N° TVA : FR14824882310
           </li>
           <li>
-            Nom du responsable de la publication : <strong>Floran SHAQIRI</strong>
+            Nom du responsable de la publication : <span class="text-primary font-medium">Floran SHAQIRI</span>
           </li>
         </ul>
         <h2 class="text-lg font-medium my-4"> 
