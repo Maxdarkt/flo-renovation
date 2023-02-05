@@ -65,7 +65,7 @@
               placeholder-text="Jean"
               :is-required="true"
               :is-disabled="false"
-              @event-change-value="validateField"
+              @event-change-value="onChangeValue"
             />
             <InputText 
               id="lastName"
@@ -74,7 +74,7 @@
               placeholder-text="Dupond"
               :is-required="true"
               :is-disabled="false"
-              @event-change-value="validateField"
+              @event-change-value="onChangeValue"
             />
           </div>
           <div class="grid gap-6 mb-6 md:grid-cols-2">
@@ -85,16 +85,16 @@
               :options="projectOptions"
               :is-required="true"
               :is-disabled="false"
-              @event-change-value="validateField"
+              @event-change-value="onChangeValue"
             />
             <InputText 
-              id="adress"
+              id="address"
               label-text="Adresse"
               type-input="text"
               placeholder-text="avenue de France"
               :is-required="true"
               :is-disabled="false"
-              @event-change-value="validateField"
+              @event-change-value="onChangeValue"
             />
           </div>
           <div class="grid gap-6 mb-6 md:grid-cols-2">
@@ -105,7 +105,7 @@
               placeholder-text="74000"
               :is-required="true"
               :is-disabled="false"
-              @event-change-value="validateField"
+              @event-change-value="onChangeValue"
             />
             <InputText 
               id="city"
@@ -114,7 +114,7 @@
               placeholder-text="ANNECY"
               :is-required="true"
               :is-disabled="false"
-              @event-change-value="validateField"
+              @event-change-value="onChangeValue"
             />
           </div>
           <div class="grid gap-6 mb-6 md:grid-cols-2">
@@ -125,16 +125,16 @@
               placeholder-text="0610203040"
               :is-required="false"
               :is-disabled="false"
-              @event-change-value="validateField"
+              @event-change-value="onChangeValue"
             />
             <InputText 
-              id="E-mail"
+              id="email"
               label-text="email"
               type-input="email"
               placeholder-text="Jean.dupond@gmail.com"
               :is-required="true"
               :is-disabled="false"
-              @event-change-value="validateField"
+              @event-change-value="onChangeValue"
             />
           </div>
           <div class="mb-6">
@@ -143,14 +143,17 @@
               label-text="Votre message"
               :is-required="false"
               :is-disabled="false"
-              @event-change-value="validateField"
+              @event-change-value="onChangeValue"
             />
           </div>
           <div class="flex justify-end space-x-12 my-4">
-            <button class="btn btn-default" type="reset">Effacer</button>
-            <button class="btn btn-primary" type="submit">Envoyer</button>
+            <button class="btn btn-default" type="reset" click="resetForm">Effacer</button>
+            <button class="btn" :class="[validatefields ? 'btn-primary' : 'btn-disabled']" type="submit" @click.prevent="sendEmail">Envoyer</button>
           </div>
         </form>
+        <div id="alert-form" class="text-lg text-center py-2 my-4 transition duration-700">
+          {{ alertForm }}
+        </div>
       </div>
     </div>
     <!-- MAPS -->
@@ -187,6 +190,8 @@
 import InputText from '@/components/form/input/InputText.vue';
 import InputTextarea from '@/components/form/input/InputTextarea.vue';
 import SelectSingle from '@/components/form/select/SelectSingle.vue';
+import { validateForm, changeClassForm } from '~/assets/js/validateForm'
+import regex from '~/assets/js/regex'
 
 export default {
   name: 'ContactPage',
@@ -197,6 +202,17 @@ export default {
   },
   data() {
     return {
+      lastname: null,
+      firstname: null,
+      project: null,
+      address: null,
+      postal: null,
+      city: null,
+      mobile: null,
+      email: null,
+      message: null,
+      alertForm: null,
+      loaded: false,
       titleBar: {
         isPicture: false,
         src: 'https://placeimg.com/1400/400/arch',
@@ -248,9 +264,106 @@ export default {
       ]
     }
   },
+  computed: {
+    validatefields() {
+      if(regex.email.test(this.email) && regex.name.test(this.firstName) && regex.name.test(this.lastName) && regex.nameComplex.test(this.address) && regex.message.test(this.message)) {
+        return true
+      }
+      return false
+    }
+  },  
   methods: {
-    validateField(payload) {
-      console.log(payload);
+    changeClassForm,
+    validateForm,
+    onChangeValue(payload) {
+      switch(payload.id) {
+        case "lastName":
+          this.lastName = payload.value
+          break;
+        case "firstName":
+          this.firstName = payload.value
+          break;
+        case "project":
+          this.project = payload.value
+          break;
+        case "address":
+          this.address = payload.value
+          break;
+        case "postal":
+          this.postal = payload.value
+          break;
+        case "city":
+          this.city = payload.value
+          break;
+        case "mobile":
+          this.mobile = payload.value
+          break;
+        case "email":
+          this.email = payload.value
+          break;
+        case "message":
+          this.message = payload.value
+          break;
+        default:
+          console.log('Error switch onChangeValue')
+      }
+      // this.validateForm(payload.id)
+    },
+    sendEmail() {
+      if(!this.validatefields) {
+        return
+      }
+      this.$axios.$post('contact/', {
+        email: this.email,
+        lastName: this.lastName,
+        firstName: this.firstName,
+        mobile: this.mobile,
+        company: this.company,
+        message: this.message,
+        to: 'fam74000@hotmail.com'
+      })
+      .then(response => {
+        if(response.code === 200) {
+          this.alertForm = 'Le mail a bien été envoyé, je vous répondrai dans les plus bref délais.'
+          const element = document.getElementById('alert-form')
+          element.classList.add('text-green-400')
+          element.classList.add('opacity-100')
+          const self = this
+          setTimeout(() => {
+            element.classList.remove('opacity-100')
+          }, 4000)
+          setTimeout(() => {
+            self.alertForm = null
+            element.classList.remove('text-green-400')
+            self.resetForm()
+          }, 5000)
+        }
+      })
+    },
+    resetForm() {
+      // get all inputs
+      // const inputs = document.querySelectorAll('input')
+      // get textarea
+      // const textarea = document.querySelector('textarea')
+      // we reset all class inputs
+      // inputs.forEach(item => this.resetInput(item))
+      // we reset class textarea
+      // this.resetInput(textarea)
+      // we reset value
+      this.firstName = null
+      this.lastName = null
+      this.project = null
+      this.address = null
+      this.postal = null
+      this.city = null
+      this.mobile = null
+      this.email = null
+      this.message = null
+      this.alertForm = null
+    },
+    resetInput(element) {
+      element.classList.remove('is-invalid')
+      element.classList.remove('is-valid')
     }
   }
 }

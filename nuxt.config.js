@@ -1,3 +1,4 @@
+const development = process.env.NODE_ENV !== 'production'
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -55,14 +56,25 @@ export default {
     '@nuxtjs/axios',
     ['nuxt-gmaps', {
       key: 'AIzaSyBmo_Gg_y6VDtA7PjEDR7mbRVyF-mACEPc',
-      //you can use libraries: ['places']
+      // you can use libraries: ['places']
     }]
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    baseURL: development ? 'http://127.0.0.1:3000/api/' : 'https://mt-develop.com/api',
+    headers: {
+        common: {
+          'Accept': 'application/json, text/plain, */*'
+        },
+        get: {'Content-Type': 'application/json'},
+        post: {'Content-Type': 'application/json'},
+        put: {'Content-Type': 'application/json'},
+        delete: {'Content-Type': 'application/json'},
+        head: {},
+        patch: {}
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
