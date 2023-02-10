@@ -56,7 +56,7 @@
       </div>
       <!-- Form Contact -->
       <div class="w-full md:w-3/5 p-4 bg-white rounded-md mt-8 md:mt-0">
-        <form action="#">
+        <form id="contactForm" action="#">
           <div class="grid gap-6 mb-6 md:grid-cols-2">
             <InputText 
               id="firstName"
@@ -147,7 +147,7 @@
             />
           </div>
           <div class="flex justify-end space-x-12 my-4">
-            <button class="btn btn-default" type="reset" click="resetForm">Effacer</button>
+            <button class="btn btn-default" type="reset" @click="resetForm">Effacer</button>
             <button class="btn" :class="[validatefields ? 'btn-primary' : 'btn-disabled']" type="submit" @click.prevent="sendEmail">Envoyer</button>
           </div>
         </form>
@@ -314,13 +314,16 @@ export default {
         return
       }
       this.$axios.$post('contact/', {
-        email: this.email,
-        lastName: this.lastName,
         firstName: this.firstName,
+        lastName: this.lastName,
+        project: this.project,
+        address: this.address,
+        postal: this.postal,
+        city: this.city,
         mobile: this.mobile,
-        company: this.company,
+        email: this.email,
         message: this.message,
-        to: 'fam74000@hotmail.com'
+        to: 'tourneuxmaxence@gmail.com'
       })
       .then(response => {
         if(response.code === 200) {
@@ -341,6 +344,7 @@ export default {
       })
     },
     resetForm() {
+      console.log('resetForm')
       // get all inputs
       // const inputs = document.querySelectorAll('input')
       // get textarea
@@ -350,6 +354,8 @@ export default {
       // we reset class textarea
       // this.resetInput(textarea)
       // we reset value
+      const contactForm = document.getElementById('contactForm')
+      contactForm.reset()
       this.firstName = null
       this.lastName = null
       this.project = null
