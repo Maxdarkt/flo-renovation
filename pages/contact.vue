@@ -344,7 +344,6 @@ export default {
       })
     },
     resetForm() {
-      console.log('resetForm')
       // get all inputs
       // const inputs = document.querySelectorAll('input')
       // get textarea

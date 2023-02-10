@@ -85,14 +85,12 @@ export default {
       const cardThree = document.getElementById('card-image-3');
 
       if(direction === 1) {
-        console.log(1)
         const step = this.count * 100;
         cardOne.style.translate = `${step}%`;
         cardTwo.style.translate = `${step}%`;
         cardThree.style.translate = `${step}%`;
         this.count === -1 ? this.count = 1 : this.count++;
       } else {
-        console.log(-1)
         const step = this.count * 100;
         cardOne.style.translate = `${step}%`;
         cardTwo.style.translate = `${step}%`;

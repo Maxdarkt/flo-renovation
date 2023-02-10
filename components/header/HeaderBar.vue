@@ -108,7 +108,6 @@ export default {
       if(window.innerWidth > 962 && window.innerWidth < 1280) {
         this.mediumScreen = true
       }
-      console.log(this.mediumScreen)
     },
     menuItem() {
       if(!this.desktop) {
