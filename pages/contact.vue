@@ -340,6 +340,20 @@ export default {
             element.classList.remove('text-green-400')
             self.resetForm()
           }, 5000)
+        } else {
+          this.alertForm = 'Une erreure est survenue. Veuillez réessayer ultérieurement.'
+          const element = document.getElementById('alert-form')
+          element.classList.add('text-green-400')
+          element.classList.add('opacity-100')
+          const self = this
+          setTimeout(() => {
+            element.classList.remove('opacity-100')
+          }, 4000)
+          setTimeout(() => {
+            self.alertForm = null
+            element.classList.remove('text-green-400')
+            self.resetForm()
+          }, 5000)
         }
       })
     },

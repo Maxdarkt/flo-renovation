@@ -19,16 +19,16 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-  router: {
-    extendRoutes(routes, resolve) {
-      routes.push(
-      {
-        name: 'Error',
-        path: '/*',
-        component: resolve(__dirname, 'pages/404.vue')
-      })
-    },
-  },
+  // router: {
+  //   extendRoutes(routes, resolve) {
+  //     routes.push(
+  //     {
+  //       name: 'Error',
+  //       path: '/*',
+  //       component: resolve(__dirname, 'pages/404.vue')
+  //     })
+  //   },
+  // },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/style.css'
