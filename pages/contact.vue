@@ -47,8 +47,8 @@
               Email :
             </p>
             <p class="font-extralight">
-              <a href="mailto:fam74000@hotmail.com">
-                fam74000@hotmail.com
+              <a href="mailto:contact@flo-renovation.fr">
+                contact@flo-renovation.fr
               </a>
             </p>
           </div>

@@ -9,11 +9,19 @@
         <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl">
           Réalisé par <span class="text-primary font-medium mt-16">Flo Rénovation</span>
         </h2>
-        <div class="px-24 mt-8">
+        <div class="px-2 mymd:px-24 mt-8">
           <div class="bg-[url('@/assets/images/home.jpg')] bg-top bg-cover h-[300px] xxs:h-[350px] xs:h-[400px] sm:h-[500px] md:h-[600px] w-full rounded-md shadow-2xl"></div>
         </div>
+        <div class="w-full flex flex-col mymd:flex-row mymd:justify-around items-center mt-16 lg:mt-32">
+          <video controls width="400">
+            <source src="@/assets/movies/movie_annecy_lac.mp4" type="video/mp4">
+          </video>
+          <video controls width="400" class="mt-8 mymd:mt-0">
+            <source src="@/assets/movies/movie_1.mp4" type="video/mp4">
+          </video>
+        </div>
       </div>
-      <h2 class="col-span-12 text-lg sm:text-xl md:text-2xl lg:text-3xl px-4">
+      <h2 class="col-span-12 text-lg sm:text-xl md:text-2xl lg:text-3xl px-4 mt-8">
         Les activités de <span class="text-primary font-medium mt-16">Flo Rénovation</span>
       </h2>
       <div

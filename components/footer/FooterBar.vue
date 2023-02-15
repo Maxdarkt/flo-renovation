@@ -11,8 +11,8 @@
         </div>
         <div class="w-full mymd:h-8 flex justify-center mymd:items-center">
           <outline-mail-icon class="w-4 h-4 text-primary" />
-          <a href="mailto:fam74000@gmail.com"  class="ml-2">
-            fam74000@gmail.com
+          <a href="mailto:contact@flo-renovation.fr"  class="ml-2">
+            contact@flo-renovation.fr
           </a>
         </div>
         <div class="w-full mymd:h-8 flex justify-center mymd:items-center items-center">
