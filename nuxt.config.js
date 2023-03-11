@@ -7,7 +7,7 @@ export default {
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s FLO-RENOVATION',
+    titleTemplate: '%s - Mélanie',
     htmlAttrs: {
       lang: 'fr',
     },

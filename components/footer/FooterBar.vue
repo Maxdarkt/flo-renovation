@@ -1,24 +1,18 @@
 <template>
-  <footer class="relative h-fit mymd:h-32 bg-secondary">
+  <footer class="relative h-fit mymd:h-32 bg-neutral">
     <div class="w-full h-fit mymd:h-24 text-white text-xs font-light pr-2 flex flex-col mymd:flex-row items-center">
       <HeaderLogo class="w-60 pt-4" :is-footer="true"/>
       <div class="w-full flex flex-col mymd:flex-row mymd:justify-around items-center mymd:divide-x-2 mymd:divide-gray-200 space-y-4 mymd:space-y-0 my-4 mymd:my-0">
         <div class="w-full mymd:h-8 flex justify-center mymd:items-center">
           <outline-phone-icon class="w-4 h-4 text-primary" />
-          <a href="tel:+33633777877" class="ml-2">
-            06 33 77 78 77
+          <a href="tel:+33660088609" class="ml-2">
+            06 60 08 86 09
           </a>
         </div>
         <div class="w-full mymd:h-8 flex justify-center mymd:items-center">
           <outline-mail-icon class="w-4 h-4 text-primary" />
           <a href="mailto:contact@flo-renovation.fr"  class="ml-2">
             contact@flo-renovation.fr
-          </a>
-        </div>
-        <div class="w-full mymd:h-8 flex justify-center mymd:items-center items-center">
-          <outline-map-icon class="w-4 h-4 text-primary" />
-          <a href="https://www.google.fr/maps/place/7+Av.+de+Bouvard,+74000+Annecy/@45.9029365,6.1183461,17z/data=!3m1!4b1!4m5!3m4!1s0x478b855808d77a0b:0xd2ddbaf4aeba1fb!8m2!3d45.9029328!4d6.1205401" target="_blank" class="ml-2">
-            7 avenue Bouvard,<br /> 74000 ANNECY
           </a>
         </div>
         <div class="w-full mymd:h-8 flex justify-center mymd:items-center">
@@ -37,7 +31,7 @@
     </div>
     <div class="w-full h-fit mymd:h-8 text-white text-xs font-light px-2 flex items-center">
       <p>
-        &copy; Copyright {{ new Date().getFullYear() }} Flo Rénovation
+        &copy; Copyright {{ new Date().getFullYear() }} Mélanie
       </p>
       <button class="absolute right-6 bottom-4 btn-circle btn-primary flex justify-center items-center w-8 h-8" @click="scrollTop">
         <outline-chevron-up-icon class="w-6 h-6" />

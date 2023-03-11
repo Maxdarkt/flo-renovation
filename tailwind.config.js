@@ -68,12 +68,12 @@ module.exports = {
     themes: [
       {
         mytheme: {
-        "primary": "#B61419", // original : #8C0427
-        "secondary": "#0E2038",
-        "accent": "#836B5D",
-        "neutral": "#F2F2F2",
-        "base-50": "#f9fafb",
-        "base-100": "#e5e7eb",
+        "primary": "#59AD32", // original : #8C0427
+        "secondary": "#A5DE61",
+        "accent": "#3259AD",
+        "neutral": "#181424",
+        "base-50": "#f5f5f4",
+        "base-100": "#FAFAFA",
         "info": "#41AEBD",
         "success": "#489380",
         "warning": "#EB7F13",
