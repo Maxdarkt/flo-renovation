@@ -14,57 +14,32 @@
         <!-- links ACCUEIL -->
         <span @click="menuItem()">
           <nuxt-link class="flex items-end px-2 py-2 no-underline text-gray-500 hover:text-primary transition duration-500 border-b border-transparent mymd:hover:border-primary font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="/">
-            <outline-home-icon class="w-8 h-8" />
-            <!-- ACCUEIL -->
+            <!-- <outline-home-icon class="w-8 h-8" /> -->
+            ACCUEIL
           </nuxt-link>
         </span>
-        <span v-if="mediumScreen">
+        <span class="block border-t mymd:border-none">
           <div class="dropdown dropdown-hover">
-            <label tabindex="0" class="block mymd:inline-block px-2 py-2 no-underline text-gray-500 font-bold cursor-pointer">PRODUITS</label>
-            <ul tabindex="0" class="dropdown-content p-4 shadow bg-base-100 rounded-box w-52 space-y-4">
-              <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="windows">FENETRES</nuxt-link></li> 
-              <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="frontDoor">PORTES D'ENTREE</nuxt-link></li>
-              <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="shutters">VOLETS</nuxt-link></li>
-              <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="garageDoor">PORTES DE GARAGE</nuxt-link></li>
+            <!-- <label tabindex="0" class="block mymd:inline-block px-2 py-2 no-underline text-gray-500 font-bold cursor-pointer">PATHOLOGIES</label> -->
+            <nuxt-link class="flex items-end px-2 py-2 no-underline text-gray-500 hover:text-primary transition duration-500 border-b border-transparent mymd:hover:border-primary font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="/">
+              PATHOLOGIES
+            </nuxt-link>
+            <ul tabindex="0" class="dropdown-content p-4 mt-1 shadow bg-base-100 rounded-box w-[300px] space-y-4">
+              <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="windows">INTOLERANCES ALIMENTAIRES</nuxt-link></li> 
+              <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="frontDoor">ALLERGIES RESPIRATOIRES</nuxt-link></li>
+              <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="shutters">TROUBLES EMOTIONNELS</nuxt-link></li>
+              <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="garageDoor">ADDICTIONS ET DEPENDANCES</nuxt-link></li>
+              <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="garageDoor">PROBLEMES DE POIDS</nuxt-link></li>
+              <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="garageDoor">TROUBLES DIGESTIFS</nuxt-link></li>
             </ul>
           </div>
         </span>
-        <!-- links WINDOWS -->
-        <span v-if="!mediumScreen" class="block border-t mymd:border-none" @click="menuItem()">
-          <nuxt-link class="block mymd:inline-block px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="windows">
-            FENETRES
-          </nuxt-link>
-        </span>
-        <!-- links DOOR -->
-        <span v-if="!mediumScreen" class="block border-t mymd:border-none" @click="menuItem()">
-          <nuxt-link class="block mymd:inline-block px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="frontDoor">
-            PORTES D'ENTREE
-          </nuxt-link>
-        </span>
-        <!-- links SHUTTERS -->
-        <span v-if="!mediumScreen" class="block border-t mymd:border-none" @click="menuItem()">
-          <nuxt-link class="block mymd:inline-block px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="shutters">
-            VOLETS
-          </nuxt-link>
-        </span>
-        <!-- links GARAGE DOOR -->
-        <span v-if="!mediumScreen" class="block border-t mymd:border-none" @click="menuItem()">
-          <nuxt-link class="block mymd:inline-block px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="garageDoor">
-            PORTES DE GARAGE
-          </nuxt-link>
-        </span>
-        <!-- links SOCIETE -->
+        
+        <!-- links ABOUT ME -->
         <span class="block border-t mymd:border-none" @click="menuItem()">
           <nuxt-link class="flex items-end px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="company">
             <!-- <outline-information-circle-icon class="w-8 h-8" /> -->
-            SOCIETE
-          </nuxt-link>
-        </span>
-        <!-- links REALISATIONS -->
-        <span class="block border-t mymd:border-none" @click="menuItem()">
-          <nuxt-link class="flex items-end px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="realisations">
-            <!-- <outline-view-grid-icon class="w-8 h-8" /> -->
-            REALISATIONS
+            A PROPOS DE MOI
           </nuxt-link>
         </span>
         <!-- links CONTACT -->
