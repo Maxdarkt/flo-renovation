@@ -187,11 +187,12 @@
 </template>
 
 <script>
+import { send } from '@emailjs/browser';
 import InputText from '@/components/form/input/InputText.vue';
 import InputTextarea from '@/components/form/input/InputTextarea.vue';
 import SelectSingle from '@/components/form/select/SelectSingle.vue';
-import { validateForm, changeClassForm } from '~/assets/js/validateForm'
-import regex from '~/assets/js/regex'
+import { validateForm, changeClassForm } from '~/assets/js/validateForm';
+import regex from '~/assets/js/regex';
 
 export default {
   name: 'ContactPage',
@@ -313,7 +314,8 @@ export default {
       if(!this.validatefields) {
         return
       }
-      this.$axios.$post('contact/', {
+
+      const datas = {
         firstName: this.firstName,
         lastName: this.lastName,
         project: this.project,
@@ -323,10 +325,11 @@ export default {
         mobile: this.mobile,
         email: this.email,
         message: this.message,
-        to: 'tourneuxmaxence@gmail.com'
-      })
+      }
+
+      send(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, datas, process.env.EMAILJS_PUBLIC_KEY, process.env.EMAILJS_PRIVATE_KEY)
       .then(response => {
-        if(response.code === 200) {
+        if(response.status === 200) {
           this.alertForm = 'Le mail a bien été envoyé, je vous répondrai dans les plus bref délais.'
           const element = document.getElementById('alert-form')
           element.classList.add('text-green-400')

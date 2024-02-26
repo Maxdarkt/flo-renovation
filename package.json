@@ -13,9 +13,10 @@
     "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.0",
     "@nuxt-hero-icons/outline": "^1.0.1",
     "@nuxt-hero-icons/solid": "^1.0.1",
-    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/dotenv": "^1.4.2",
     "core-js": "^3.25.3",
     "daisyui": "^2.46.0",
     "nuxt": "^2.15.8",

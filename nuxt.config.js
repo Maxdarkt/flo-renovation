@@ -1,4 +1,24 @@
-const development = process.env.NODE_ENV !== 'production'
+import { init } from '@emailjs/browser';
+
+init({
+  publicKey: process.env.EMAILJS_PUBLIC_KEY,
+  privateKey: process.env.EMAILJS_PRIVATE_KEY,
+  // Do not allow headless browsers
+  blockHeadless: true,
+  // blockList: {
+  //   // Block the suspended emails
+  //   list: ['foo@emailjs.com', 'bar@emailjs.com'],
+  //   // The variable contains the email address
+  //   watchVariable: 'userEmail',
+  // },
+  limitRate: {
+    // Set the limit rate for the application
+    id: 'app',
+    // Allow 1 request per 10s
+    throttle: 10000,
+  },
+});
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -53,30 +73,15 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
+    '@nuxtjs/dotenv',
     ['nuxt-gmaps', {
       key: 'AIzaSyBmo_Gg_y6VDtA7PjEDR7mbRVyF-mACEPc',
       // you can use libraries: ['places']
-    }]
+    }],
   ],
-
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: development ? 'http://127.0.0.1:3000/api/' : 'https://www.mt-develop.com/api',
-    headers: {
-        common: {
-          'Accept': 'application/json, text/plain, */*'
-        },
-        get: {'Content-Type': 'application/json'},
-        post: {'Content-Type': 'application/json'},
-        put: {'Content-Type': 'application/json'},
-        delete: {'Content-Type': 'application/json'},
-        head: {},
-        patch: {}
-    }
+  dotenv: {
+    path: process.cwd(),
   },
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: {
