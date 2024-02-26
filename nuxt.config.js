@@ -75,7 +75,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/dotenv',
     ['nuxt-gmaps', {
-      key: 'AIzaSyBmo_Gg_y6VDtA7PjEDR7mbRVyF-mACEPc',
+      key: process.env.GOOGLE_MAPS_API_KEY_FLO,
       // you can use libraries: ['places']
     }],
   ],
