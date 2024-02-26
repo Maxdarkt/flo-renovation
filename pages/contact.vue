@@ -327,13 +327,6 @@ export default {
         message: this.message,
       }
 
-      console.log({
-        serviceId: this.$config.emailJSServiceId,
-        templateId: this.$config.emailJSTemplateId,
-        datas,
-        publicKey: this.$config.emailJSPublicKey
-      })
-
       send(this.$config.emailJSServiceId, this.$config.emailJSTemplateId, datas, this.$config.emailJSPublicKey)
       .then(response => {
         if(response.status === 200) {
