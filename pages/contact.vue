@@ -328,14 +328,13 @@ export default {
       }
 
       console.log({
-        serviceId: process.env.EMAILJS_SERVICE_ID,
-        templateId: process.env.EMAILJS_TEMPLATE_ID,
+        serviceId: this.$config.emailJSServiceId,
+        templateId: this.$config.emailJSTemplateId,
         datas,
-        publicKey: process.env.EMAILJS_PUBLIC_KEY,
-        privateKey: process.env.EMAILJS_PRIVATE_KEY
+        publicKey: this.$config.emailJSPublicKey
       })
 
-      send(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, datas, process.env.EMAILJS_PUBLIC_KEY, process.env.EMAILJS_PRIVATE_KEY)
+      send(this.$config.emailJSServiceId, this.$config.emailJSTemplateId, datas, this.$config.emailJSPublicKey)
       .then(response => {
         if(response.status === 200) {
           this.alertForm = 'Le mail a bien été envoyé, je vous répondrai dans les plus bref délais.'

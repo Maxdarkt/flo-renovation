@@ -54,6 +54,12 @@ export default {
     '@/assets/css/style.css'
   ],
 
+  publicRuntimeConfig: {
+    emailJSPublicKey: process.env.EMAILJS_PUBLIC_KEY,
+    emailJSServiceId: process.env.EMAILJS_SERVICE_ID,
+    emailJSTemplateId: process.env.EMAILJS_TEMPLATE_ID
+  },
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
