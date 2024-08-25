@@ -25,10 +25,13 @@
         </p>
         <ul>
           <li>
-            7 avenue Bouvard
+            5 avenue du pont de Tasset
           </li>
           <li>
-            74000 ANNECY
+            74960 ANNECY
+          </li>
+          <li>
+            Tél : +33 (0)4 50 46 51 55
           </li>
           <li>
             Tél : +33 (0)6 33 77 78 77
@@ -40,7 +43,7 @@
             Raison sociale : <span class="text-primary font-medium">Flo Rénovation</span>
           </li>
           <li>
-            Forme Juridique : EURL
+            Forme Juridique : SARL
           </li>
           <li>
             Email : <span class="text-primary font-medium">contact@flo-renovation.fr</span>
@@ -49,7 +52,7 @@
             RCS : Annecy, N° Siren 824 882 310 00017
           </li>
           <li>
-            Capital social : 10000 euros
+            Capital social : 8 000 euros
           </li>
           <li>
             N° TVA : FR14824882310

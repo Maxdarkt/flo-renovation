@@ -224,31 +224,94 @@ export default {
         },
         {
           id: 22,
-          src: require('@/assets/images/windows/window_new_1.jpg'),
-          alt: 'Projet Neuf',
+          src: require('@/assets/images/windows/baie_anthracite_gros_plan.jpg'),
+          alt: 'Projet Rénovation',
           title: 'Fenêtres',
           category: 'windows'
         },
         {
           id: 23,
-          src: require('@/assets/images/windows/window_new_2.jpg'),
-          alt: 'Projet Neuf',
+          src: require('@/assets/images/windows/baie_anthracite_interieur_2.jpg'),
+          alt: 'Projet Rénovation',
           title: 'Fenêtres',
           category: 'windows'
         },
         {
           id: 24,
-          src: require('@/assets/images/windows/window_new_3.jpg'),
-          alt: 'Projet Neuf',
+          src: require('@/assets/images/windows/baie_anthracite_interieur_OB.jpg'),
+          alt: 'Projet Rénovation',
           title: 'Fenêtres',
           category: 'windows'
         },
         {
           id: 25,
+          src: require('@/assets/images/windows/baie_anthracite_interieur.jpg'),
+          alt: 'Projet Rénovation',
+          title: 'Fenêtres',
+          category: 'windows'
+        },
+        {
+          id: 26,
+          src: require('@/assets/images/windows/cuisine_int_1.jpg'),
+          alt: 'Projet Rénovation',
+          title: 'Fenêtres',
+          category: 'windows'
+        },
+        {
+          id: 27,
+          src: require('@/assets/images/windows/fenetre_anthracite_gros_plan.jpg'),
+          alt: 'Projet Rénovation',
+          title: 'Fenêtres',
+          category: 'windows'
+        },
+        {
+          id: 28,
+          src: require('@/assets/images/windows/fenetre_anthracite_OB.jpg'),
+          alt: 'Projet Rénovation',
+          title: 'Fenêtres',
+          category: 'windows'
+        },
+        {
+          id: 27,
+          src: require('@/assets/images/windows/fenetre_anthracite_gros_plan.jpg'),
+          alt: 'Projet Rénovation',
+          title: 'Fenêtres',
+          category: 'windows'
+        },
+        {
+          id: 28,
+          src: require('@/assets/images/windows/salon_interieur_1.jpg'),
+          alt: 'Projet Rénovation',
+          title: 'Fenêtres',
+          category: 'windows'
+        },
+        {
+          id: 29,
+          src: require('@/assets/images/windows/salon_interieur_2.jpg'),
+          alt: 'Projet Rénovation',
+          title: 'Fenêtres',
+          category: 'windows'
+        },
+        {
+          id: 30,
           src: require('@/assets/images/windows/windows_coulissant_2.jpg'),
           alt: 'Menuiserie Coulissant',
           title: 'Fenêtres',
           category: 'windows'
+        },
+        {
+          id: 31,
+          src: require('@/assets/images/frontDoor/porte_interieur_anthracite_int.jpg'),
+          alt: 'photo porte d\'entrée',
+          title: 'Porte d\'entrée',
+          category: 'frontDoor'
+        },
+        {
+          id: 31,
+          src: require('@/assets/images/frontDoor/porte_exterieur_1.jpg'),
+          alt: 'photo porte d\'entrée',
+          title: 'Porte d\'entrée',
+          category: 'frontDoor'
         }
       ],
       titleBar: {

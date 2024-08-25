@@ -22,6 +22,9 @@
               Téléphone :
             </p>
             <p class="font-extralight">
+              Tél : 04 50 46 51 55
+            </p>
+            <p class="font-extralight">
               Tél : 06 33 77 78 77
             </p>
           </div>
@@ -34,8 +37,7 @@
               Addresse :
             </p>
             <p class="font-extralight">
-              7 avenue Bouvard<br />
-              74000 ANNECY
+              5 avenue du pont de Tasset ,<br /> 74960 ANNECY
             </p>
           </div>
         </div>
@@ -240,14 +242,15 @@ export default {
         }
       ],
       currentLocation: {
-        lat: 45.90283,
-        lng: 6.12166
+        title: 'Meythet',
+        lat: 45.9096446,
+        lng: 6.0969738
       },
       circleOptions: {},
       locations: [
         {
-          lat: 45.90283,
-          lng: 6.12166
+          lat: 45.9096446,
+          lng: 6.0969738
         }
       ],
       pins: {

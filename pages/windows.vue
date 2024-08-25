@@ -35,36 +35,36 @@ export default {
       picturesSlide: [
         {
           id: 1,
-          src: require('@/assets/images/windows/window_new_1.jpg'),
-          alt: 'Menuiseries chantier neuf',
-          title: 'Projet Neuf',
+          src: require('@/assets/images/windows/salon_interieur_2.jpg'),
+          alt: 'Menuiseries chantier rénovation',
+          title: 'Projet Rénovation',
           isLink: true,
           linkText: 'Devis gratuit',
           to: 'contact'
         },
         {
           id: 2,
-          src: require('@/assets/images/windows/window_new_2.jpg'),
-          alt: 'Menuiseries chantier neuf',
-          title: 'Projet Neuf',
+          src: require('@/assets/images/windows/cuisine_int_1.jpg'),
+          alt: 'Menuiseries chantier rénovation',
+          title: 'Projet Rénovation',
           isLink: true,
           linkText: 'Devis gratuit',
           to: 'contact'
         },
         {
           id: 3,
-          src: require('@/assets/images/windows/window_new_3.jpg'),
-          alt: 'Menuiseries chantier neuf',
-          title: 'Projet Neuf',
+          src: require('@/assets/images/windows/baie_anthracite_interieur.jpg'),
+          alt: 'Menuiseries chantier rénovation',
+          title: 'Projet Rénovation',
           isLink: true,
           linkText: 'Devis gratuit',
           to: 'contact'
         },
         {
           id: 4,
-          src: require('@/assets/images/windows/windows_coulissant_2.jpg'),
-          alt: 'Menuiseries coulissant',
-          title: 'Coulissant',
+          src: require('@/assets/images/windows/baie_anthracite_interieur_OB.jpg'),
+          alt: 'Menuiseries coulissant OB',
+          title: 'Projet Rénovation',
           isLink: true,
           linkText: 'Devis gratuit',
           to: 'contact'

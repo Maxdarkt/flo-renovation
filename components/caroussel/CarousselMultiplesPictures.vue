@@ -61,45 +61,45 @@ export default {
       pictures: [
         {
           id: 1,
-          src: require('@/assets/images/frontDoor/door_front_1.jpeg'),
+          src: require('@/assets/images/frontDoor/door_front_2.jpeg'),
           alt: 'Porte d\'entrée',
           title: 'Porte d\'entrée'
         },
         {
           id: 2,
-          src: require('@/assets/images/garageDoor/garage_door_large_wood.jpeg'),
-          alt: 'volet roulant',
-          title: 'Volet roulant rénovation'
+          src: require('@/assets/images/windows/baie_anthracite_interieur_2.jpg'),
+          alt: 'Menuiserie Extérieure',
+          title: 'Menuiserie Extérieure'
         },
         {
           id: 3,
-          src: require('@/assets/images/shutters/shutters_bso.jpeg'),
-          alt: 'Porte d\'entrée',
-          title: 'Porte d\'entrée'
-        },
-        {
-          id: 4,
-          src: require('@/assets/images/shutters/shutters_renovation_solar_2.jpeg'),
+          src: require('@/assets/images/garageDoor/garage_door_large_wood.jpeg'),
           alt: 'Porte de garage',
           title: 'Porte de garage'
         },
         {
+          id: 4,
+          src: require('@/assets/images/shutters/shutters_bso.jpeg'),
+          alt: 'volet roulant',
+          title: 'Volet roulant rénovation'
+        },
+        {
           id: 5,
+          src: require('@/assets/images/windows/windows_coulissant_1.jpg'),
+          alt: 'Menuiserie Extérieure',
+          title: 'Menuiserie Extérieure'
+        },
+        {
+          id: 6,
           src: require('@/assets/images/shutters/shutters_renovation_solar_opened.jpeg'),
           alt: 'chantier extension',
           title: 'Extension'
         },
         {
-          id: 6,
-          src: require('@/assets/images/frontDoor/door_front_8.jpeg'),
-          alt: 'chantier extension',
-          title: 'Extension'
-        },
-        {
           id: 7,
-          src: require('@/assets/images/garageDoor/garage_door_white_2.jpeg'),
-          alt: 'chantier extension',
-          title: 'Extension'
+          src: require('@/assets/images/windows/cuisine_int_1.jpg'),
+          alt: 'Menuiserie Extérieure',
+          title: 'Menuiserie Extérieure'
         }
       ],
       cardsElement: null,

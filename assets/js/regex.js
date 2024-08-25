@@ -11,7 +11,7 @@ const regex = {
   matricule: /^[a-zA-Z0-9 .-]{9,18}$/,
   status: /^[a-zA-Z]{2,6}$/,
   role: /^[0-9]$/,
-  message: /^[A-Za-z0-9 éèêàâôûùïîç.'?!,@$#-_\n]{15,500}$/
+  message: /^[A-Za-z0-9 éèêàâôûùïîç.'?!,@$#-_\n]{4,500}$/
 }
 
 module.exports = regex

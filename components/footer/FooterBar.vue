@@ -3,11 +3,19 @@
     <div class="w-full h-fit mymd:h-24 text-white text-xs font-light pr-2 flex flex-col mymd:flex-row items-center">
       <HeaderLogo class="w-60 pt-4" :is-footer="true"/>
       <div class="w-full flex flex-col mymd:flex-row mymd:justify-around items-center mymd:divide-x-2 mymd:divide-gray-200 space-y-4 mymd:space-y-0 my-4 mymd:my-0">
-        <div class="w-full mymd:h-8 flex justify-center mymd:items-center">
-          <outline-phone-icon class="w-4 h-4 text-primary" />
-          <a href="tel:+33633777877" class="ml-2">
-            06 33 77 78 77
-          </a>
+        <div class="w-full mymd:h-8 flex flex-col justify-center mymd:items-center">
+          <div class="flex items-center">
+            <outline-phone-icon class="w-4 h-4 text-primary" />
+            <a href="tel:+33633777877" class="ml-2">
+              06 33 77 78 77
+            </a>
+          </div>
+          <div class="flex items-center">
+            <outline-phone-icon class="w-4 h-4 text-primary" />
+            <a href="tel:+33450465155" class="ml-2 mt-1">
+              04 50 46 51 55
+            </a>
+          </div>
         </div>
         <div class="w-full mymd:h-8 flex justify-center mymd:items-center">
           <outline-mail-icon class="w-4 h-4 text-primary" />
@@ -17,8 +25,8 @@
         </div>
         <div class="w-full mymd:h-8 flex justify-center mymd:items-center items-center">
           <outline-map-icon class="w-4 h-4 text-primary" />
-          <a href="https://www.google.fr/maps/place/7+Av.+de+Bouvard,+74000+Annecy/@45.9029365,6.1183461,17z/data=!3m1!4b1!4m5!3m4!1s0x478b855808d77a0b:0xd2ddbaf4aeba1fb!8m2!3d45.9029328!4d6.1205401" target="_blank" class="ml-2">
-            7 avenue Bouvard,<br /> 74000 ANNECY
+          <a href="https://www.google.fr/maps/place/5+Av.+du+Pont+de+Tasset,+74960+Meythet/@45.9096446,6.0969738,20.31z" target="_blank" class="ml-2">
+            5 avenue du pont de Tasset ,<br /> 74960 ANNECY
           </a>
         </div>
         <div class="w-full mymd:h-8 flex justify-center mymd:items-center">
@@ -60,7 +68,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

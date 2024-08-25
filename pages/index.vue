@@ -66,7 +66,7 @@ export default {
       picturesSlide: [
         {
           id: 1,
-          src: require('@/assets/images/caroussel/accueil_salon.jpeg'),
+          src: require('@/assets/images/caroussel/slide_1.jpg'),
           alt: 'salon avec baies vitrées',
           title: 'Fenêtres',
           isLink: true,
@@ -104,7 +104,7 @@ export default {
       picturesCard: [
         {
           id: 1,
-          src: require('@/assets/images/caroussel/accueil_salon.jpeg'),
+          src: require('@/assets/images/windows/salon_interieur_2.jpg'),
           alt: 'Photo de fenêtres',
           title: 'Fenêtres',
           text: 'Découvrir notre gamme fenêtres et coulissants.',
@@ -115,7 +115,7 @@ export default {
         },
         {
           id: 2,
-          src: require('@/assets/images/frontDoor/door_front_2.jpeg'),
+          src: require('@/assets/images/frontDoor/porte_interieur_anthracite_int.jpg'),
           alt: 'Photo porte entrée intérieur',
           title: 'Porte d\'entrée',
           text: 'Découvrir notre gamme porte d\'entrée.',
