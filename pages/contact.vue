@@ -189,7 +189,6 @@
 </template>
 
 <script>
-import { send } from '@emailjs/browser';
 import InputText from '@/components/form/input/InputText.vue';
 import InputTextarea from '@/components/form/input/InputTextarea.vue';
 import SelectSingle from '@/components/form/select/SelectSingle.vue';
@@ -226,19 +225,19 @@ export default {
       projectOptions: [
         {
           label: 'Neuf',
-          value: 'new'
+          value: 'Neuf'
         },
         { 
           label: 'Rénovation',
-          value: 'renovation'
+          value: 'Renovation'
         },
         { 
           label: 'Extension',
-          value: 'extension'
+          value: 'Extension'
         },
         { 
           label: 'Autre',
-          value: 'other'
+          value: 'Autre'
         }
       ],
       currentLocation: {
@@ -270,12 +269,12 @@ export default {
   },
   computed: {
     validatefields() {
-      if(regex.email.test(this.email) && regex.name.test(this.firstName) && regex.name.test(this.lastName) && regex.nameComplex.test(this.address) && regex.message.test(this.message)) {
+      if(regex.email.test(this.email) && regex.name.test(this.firstName) && regex.name.test(this.lastName) && regex.nameComplex.test(this.address)) {
         return true
       }
       return false
     }
-  },  
+  },
   methods: {
     changeClassForm,
     validateForm,
@@ -314,54 +313,73 @@ export default {
       // this.validateForm(payload.id)
     },
     sendEmail() {
-      if(!this.validatefields) {
-        return
+      if (!this.validatefields) {
+        return;
       }
 
       const datas = {
-        firstName: this.firstName,
-        lastName: this.lastName,
-        project: this.project,
-        address: this.address,
-        postal: this.postal,
-        city: this.city,
-        mobile: this.mobile,
-        email: this.email,
-        message: this.message,
-      }
+        to: process.env.NODE_ENV === 'development' ? process.env.EMAIL_TO_DEV : process.env.EMAIL_TO_PROD,
+        fromName: 'Notification Flo-Renovation',
+        subject: 'Nouveau message de contact Flo-Renovation',
+        html: `
+          <p> Voici une demande de contact de la part de ${this.firstName} ${this.lastName} :</p>
+          <p>Projet: ${this.project}</p>
+          <p>Adresse: ${this.address}</p>
+          <p>Code Postal: ${this.postal}</p>
+          <p>Ville: ${this.city}</p>
+          <p>Téléphone: ${this.mobile}</p>
+          <p>Email: ${this.email}</p>
+          <p>Message: ${this.message}</p>
+        `,
+      };
 
-      send(this.$config.emailJSServiceId, this.$config.emailJSTemplateId, datas, this.$config.emailJSPublicKey)
-      .then(response => {
-        if(response.status === 200) {
-          this.alertForm = 'Le mail a bien été envoyé, je vous répondrai dans les plus bref délais.'
-          const element = document.getElementById('alert-form')
-          element.classList.add('text-green-400')
-          element.classList.add('opacity-100')
-          const self = this
+      const url = process.env.NODE_ENV === 'development' ? `${process.env.API_MT_URL_DEV}/email/html-basic` : `${process.env.API_MT_URL_PROD}/email/html-basic`;
+
+      const headers = {
+        'Content-Type': 'application/json',
+        'X-API-KEY': process.env.X_API_KEY,
+      };
+
+      // Appel à l'API pour envoyer l'email
+      fetch(url, {
+        method: 'POST',
+        headers,
+        body: JSON.stringify(datas),
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          this.alertForm = 'Le mail a bien été envoyé, je vous répondrai dans les plus brefs délais.';
+          const element = document.getElementById('alert-form');
+          element.classList.add('text-green-400', 'opacity-100');
           setTimeout(() => {
-            element.classList.remove('opacity-100')
-          }, 4000)
+            element.classList.remove('opacity-100');
+          }, 4000);
           setTimeout(() => {
-            self.alertForm = null
-            element.classList.remove('text-green-400')
-            self.resetForm()
-          }, 5000)
+            this.alertForm = null;
+            element.classList.remove('text-green-400');
+            this.resetForm();
+          }, 5000);
         } else {
-          this.alertForm = 'Une erreure est survenue. Veuillez réessayer ultérieurement.'
-          const element = document.getElementById('alert-form')
-          element.classList.add('text-green-400')
-          element.classList.add('opacity-100')
-          const self = this
-          setTimeout(() => {
-            element.classList.remove('opacity-100')
-          }, 4000)
-          setTimeout(() => {
-            self.alertForm = null
-            element.classList.remove('text-green-400')
-            self.resetForm()
-          }, 5000)
+          this.handleError();
         }
       })
+      .catch(() => {
+        this.handleError();
+      });
+    },
+    handleError() {
+      this.alertForm = 'Une erreur est survenue. Veuillez réessayer ultérieurement.';
+      const element = document.getElementById('alert-form');
+      element.classList.add('text-red-400', 'opacity-100');
+      setTimeout(() => {
+        element.classList.remove('opacity-100');
+      }, 4000);
+      setTimeout(() => {
+        this.alertForm = null;
+        element.classList.remove('text-red-400');
+        this.resetForm();
+      }, 5000);
     },
     resetForm() {
       // get all inputs

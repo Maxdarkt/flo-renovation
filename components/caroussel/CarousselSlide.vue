@@ -6,8 +6,8 @@
       <div v-for="picture of pictures" :key="picture.id" class="dot w-3 h-3 rounded-full cursor-pointer" @click="currentSlide(picture.id)"></div>
     </div>
     <!-- The pictures -->
-    <div v-for="picture of pictures" :key="picture.id" class="slide absolute top-0 left-0 w-full bottom-0 transform transition-all duration-500 ease-in-out opacity-0">
-      <img class="w-full h-full object-cover" :src="picture.src" :alt="picture.alt">
+    <div v-for="picture of pictures" :key="picture.id" class="slide absolute top-0 left-0 w-full bottom-0 transform transition-all duration-500 ease-in-out opacity-0 bg-black/80">
+      <img class="w-full h-full object-cover 2xl:object-contain" :src="picture.src" :alt="picture.alt">
       <div class="absolute top-1/3 w-[50%] md:w-[40%] mx-[25%] md:mx-[30%] text-white bg-black/50 rounded-md p-4">
         <p class="font-semibold text-xl text-center">
           {{ picture.title }}

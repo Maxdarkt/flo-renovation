@@ -101,9 +101,9 @@ export default {
         },
         {
           id: 2,
-          src: 'https://placeimg.com/1200/678/arch',
-          alt: 'chantier neuf',
-          title: 'Maison neuve'
+          src: require('@/assets/images/local_facade.jpg'),
+          alt: 'Facade du local',
+          title: 'Flo Rénovation'
         }
       ],
     }

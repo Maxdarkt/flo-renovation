@@ -4,7 +4,7 @@
       :pictures="picturesSlide"
     />
     <BannerQualityHome />
-    <div class="lg:max-w-screen-lg grid grid-cols-12 xxs:gap-8 md:gap-12 justify-center items-center px-4 mt-12 mb-24 mx-auto">
+    <div class="lg:max-w-screen-lg xl:max-w-screen-xl grid grid-cols-12 xxs:gap-8 md:gap-12 justify-center items-center px-4 mt-12 mb-24 mx-auto">
       <div class="col-span-12 px-4 lg:px-10">
         <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl">
           Réalisé par <span class="text-primary font-medium mt-16">Flo Rénovation</span>
@@ -12,11 +12,11 @@
         <div class="px-2 mymd:px-24 mt-8">
           <div class="bg-[url('@/assets/images/home.jpg')] bg-top bg-cover h-[300px] xxs:h-[350px] xs:h-[400px] sm:h-[500px] md:h-[600px] w-full rounded-md shadow-2xl"></div>
         </div>
-        <div class="w-full flex flex-col mymd:flex-row mymd:justify-around items-center mt-16 lg:mt-32">
-          <video controls width="400">
-            <source src="@/assets/movies/movie_annecy_lac.mp4" type="video/mp4">
+        <div class="w-full flex flex-col mymd:flex-row mymd:justify-around items-center mt-16 lg:mt-32 gap-8">
+          <video controls class="w-full h-[300px] xxs:h-[350px] xs:h-[400px] sm:h-[500px] md:h-[600px]">
+            <source src="@/assets/movies/presentation_local.mp4" type="video/mp4">
           </video>
-          <video controls width="400" class="mt-8 mymd:mt-0">
+          <video controls class="w-full h-[300px] xxs:h-[350px] xs:h-[400px] sm:h-[500px] md:h-[600px]">
             <source src="@/assets/movies/movie_1.mp4" type="video/mp4">
           </video>
         </div>
@@ -66,7 +66,7 @@ export default {
       picturesSlide: [
         {
           id: 1,
-          src: require('@/assets/images/caroussel/slide_1.jpg'),
+          src: require('@/assets/images/caroussel/accueil_salon_2.jpg'),
           alt: 'salon avec baies vitrées',
           title: 'Fenêtres',
           isLink: true,
