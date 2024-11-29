@@ -50,6 +50,15 @@ export default {
     '@/assets/css/style.css'
   ],
 
+  publicRuntimeConfig: {
+    nodeEnv: process.env.NODE_ENV,
+    apiUrlProd: process.env.API_MT_URL_PROD,
+    apiUrlDev: process.env.API_MT_URL_DEV,
+    xApiKey: process.env.X_API_KEY,
+    emailToProd: process.env.EMAIL_TO_PROD,
+    emailToDev: process.env.EMAIL_TO_DEV
+  },
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 

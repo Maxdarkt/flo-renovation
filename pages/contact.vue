@@ -317,8 +317,16 @@ export default {
         return;
       }
 
+      console.log('nodeEnv', this.$config.nodeEnv);
+      console.log('apiUrlProd', this.$config.apiUrlProd);
+      console.log('apiUrlDev', this.$config.apiUrlDev);
+      console.log('xApiKey', this.$config.xApiKey);
+      console.log('emailToProd', this.$config.emailToProd);
+      console.log('emailToDev', this.$config.emailToDev);
+
+
       const datas = {
-        to: process.env.NODE_ENV === 'development' ? process.env.EMAIL_TO_DEV : process.env.EMAIL_TO_PROD,
+        to: this.$config.nodeEnv === 'development' ? this.$config.emailToDev : this.$config.emailToProd,
         fromName: 'Notification Flo-Renovation',
         subject: 'Nouveau message de contact Flo-Renovation',
         html: `
@@ -333,11 +341,11 @@ export default {
         `,
       };
 
-      const url = process.env.NODE_ENV === 'development' ? `${process.env.API_MT_URL_DEV}/email/html-basic` : `${process.env.API_MT_URL_PROD}/email/html-basic`;
+      const url = this.$config.nodeEnv === 'development' ? `${this.$config.apiUrlDev}/email/html-basic` : `${this.$config.apiUrlProd}/email/html-basic`;
 
       const headers = {
         'Content-Type': 'application/json',
-        'X-API-KEY': process.env.X_API_KEY,
+        'X-API-KEY': this.$config.xApiKey,
       };
 
       // Appel à l'API pour envoyer l'email
