@@ -1,24 +1,3 @@
-import { init } from '@emailjs/browser';
-
-init({
-  publicKey: process.env.EMAILJS_PUBLIC_KEY,
-  privateKey: process.env.EMAILJS_PRIVATE_KEY,
-  // Do not allow headless browsers
-  blockHeadless: true,
-  // blockList: {
-  //   // Block the suspended emails
-  //   list: ['foo@emailjs.com', 'bar@emailjs.com'],
-  //   // The variable contains the email address
-  //   watchVariable: 'userEmail',
-  // },
-  limitRate: {
-    // Set the limit rate for the application
-    id: 'app',
-    // Allow 1 request per 10s
-    throttle: 10000,
-  },
-});
-
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -70,12 +49,6 @@ export default {
   css: [
     '@/assets/css/style.css'
   ],
-
-  publicRuntimeConfig: {
-    emailJSPublicKey: process.env.EMAILJS_PUBLIC_KEY,
-    emailJSServiceId: process.env.EMAILJS_SERVICE_ID,
-    emailJSTemplateId: process.env.EMAILJS_TEMPLATE_ID
-  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
