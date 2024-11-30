@@ -317,14 +317,6 @@ export default {
         return;
       }
 
-      console.log('nodeEnv', this.$config.nodeEnv);
-      console.log('apiUrlProd', this.$config.apiUrlProd);
-      console.log('apiUrlDev', this.$config.apiUrlDev);
-      console.log('xApiKey', this.$config.xApiKey);
-      console.log('emailToProd', this.$config.emailToProd);
-      console.log('emailToDev', this.$config.emailToDev);
-
-
       const datas = {
         to: this.$config.nodeEnv === 'development' ? this.$config.emailToDev : this.$config.emailToProd,
         fromName: 'Notification Flo-Renovation',
