@@ -9,12 +9,12 @@
         backgroundRepeat: 'no-repeat'
       }" 
       class="w-full h-40 flex justify-center items-center">
-      <h1 class="text-4xl font-semibold" :class="titleColor">
+      <h1 class="text-2xl xs:text-3xl sm:text-4xl text-center font-semibold" :class="titleColor">
         {{  title  }}
       </h1>
     </div>
     <div v-else class="w-full h-40 bg-center bg-cover bg-no-repeat flex justify-center items-center" :class="`${bgColor}`">
-      <h1 class="text-4xl font-semibold text-white">
+      <h1 class="text-2xl xs:text-3xl sm:text-4xl text-center font-semibold text-white">
         {{  title  }}
       </h1>
     </div>

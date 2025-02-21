@@ -24,6 +24,7 @@
             <ul tabindex="0" class="dropdown-content p-4 shadow bg-base-100 rounded-box w-52 space-y-4">
               <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="windows">FENETRES</nuxt-link></li> 
               <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="frontDoor">PORTES D'ENTREE</nuxt-link></li>
+              <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="reinforcedDoor">PORTES BLINDEES</nuxt-link></li>
               <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="shutters">VOLETS</nuxt-link></li>
               <li><nuxt-link class="px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="garageDoor">PORTES DE GARAGE</nuxt-link></li>
             </ul>
@@ -39,6 +40,12 @@
         <span v-if="!mediumScreen" class="block border-t mymd:border-none" @click="menuItem()">
           <nuxt-link class="block mymd:inline-block px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="frontDoor">
             PORTES D'ENTREE
+          </nuxt-link>
+        </span>
+        <!-- links REINFORCED DOOR -->
+        <span v-if="!mediumScreen" class="block border-t mymd:border-none" @click="menuItem()">
+          <nuxt-link class="block mymd:inline-block px-2 py-2 no-underline text-gray-500 hover:text-primary border-b border-transparent mymd:hover:border-primary transition duration-500 font-bold" exact-active-class="text-primary mymd:border-primary font-bold" to="reinforcedDoor">
+            PORTES BLINDEES
           </nuxt-link>
         </span>
         <!-- links SHUTTERS -->

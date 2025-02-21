@@ -28,7 +28,7 @@
         v-for="item of picturesCard"
         :id="`card-${item.id}`"
         :key="item.id"
-        class="col-span-12 md:col-span-6 flex justify-center h-[400px] sm:h-[500px] mt-A"
+        class="col-span-12 md:col-span-6 flex justify-center h-[400px] sm:h-[540px] mt-8"
       >
         <CardVertImgDesc 
           :id="`CardVertImgDesc-${item.id}`"
@@ -46,6 +46,7 @@
         />
       </div>
     </div>
+
     <BannerStrongPoint />
     <CarousselMultiplesPictures />
   </div>
@@ -145,6 +146,28 @@ export default {
           isLink: true,
           linkText: 'En savoir +',
           to: 'garageDoor'
+        },
+        {
+          id: 5,
+          src: require('@/assets/images/reinforcedDoor/reinforced_door_diamant_10.jpg'),
+          alt: 'photo porte blindée',
+          title: 'Porte blindée - Diamant 10',
+          text: 'Découvrir notre gamme sur les portes blindées.',
+          isBtn: false,
+          isLink: true,
+          linkText: 'En savoir +',
+          to: 'reinforcedDoor#diamant-10'
+        },
+        {
+          id: 6,
+          src: require('@/assets/images/reinforcedDoor/reinforced_door_diamant_20.jpg'),
+          alt: 'photo porte blindée',
+          title: 'Porte blindée - Diamant 20',
+          text: 'Découvrir notre gamme sur les portes blindées.',
+          isBtn: false,
+          isLink: true,
+          linkText: 'En savoir +',
+          to: 'reinforcedDoor#diamant-20'
         }
       ]
     }

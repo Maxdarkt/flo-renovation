@@ -43,7 +43,7 @@ export default {
         path: '/*',
         component: resolve(__dirname, 'pages/404.vue')
       })
-    },
+    }
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
