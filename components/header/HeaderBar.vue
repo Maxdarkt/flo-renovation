@@ -1,7 +1,7 @@
 <template>
-  <header id="header" class="h-[6rem] bg-white fixed w-screen shadow-mymd z-30 transition-all duration-300" :class="{'h-[4rem]' : isScrolled}">
+  <header id="header" class="bg-white fixed w-screen shadow-mymd z-30 transition-all duration-300" :class="[isScrolled ? 'h-[4rem]' : 'h-[6rem]']">
     <!-- navbar -->
-    <nav class="nav flex flex-wrap items-center justify-between transition-all duration-300 px-0 pt-4" :class="{'pt-1' : isScrolled}">
+    <nav class="nav flex flex-wrap items-center justify-between transition-all duration-300 px-0" :class="[isScrolled ? 'pt-1' : 'pt-4']">
       <!-- logo -->
       <HeaderLogo class="transition-all duration-500 mr-6 py-1 text-gray-500" :is-scrolled="isScrolled" :class="[ isScrolled ? 'w-48 xs:w-[16rem]' : 'w-60 xs:w-[20rem]' ]"/>
       <!-- Responsive Menu checkBox -->
@@ -86,47 +86,34 @@
   </header>
 </template>
 
-<script>
-export default {
-  name: 'HeaderBar',
-  data() {
-    return {
-      desktop: true,
-      mediumScreen: false,
-      isScrolled: false
-    }
-  },
-  computed: {
-  },
-  mounted() {
-    this.$nextTick(function () {
-      this.isDesktop()
-      window.addEventListener('resize', this.listenResize)
-    })
-    window.addEventListener('resize', this.isDesktop)
-    window.addEventListener('scroll', this.listenScroll)
-  },
-  methods: {
-    listenResize() {
-      this.isDesktop()
-    },
-    isDesktop() {
-      this.desktop = window.innerWidth > 962
-      if(window.innerWidth > 962 && window.innerWidth < 1280) {
-        this.mediumScreen = true
-      }
-    },
-    menuItem() {
-      if(!this.desktop) {
-        const checkboxMenu = document.getElementById("menu-btn")
-        checkboxMenu.checked = false
-      }
-    },
-    listenScroll() {
-      this.isScrolled = window.scrollY > 50
-    }
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const desktop = ref(true)
+const mediumScreen = ref(false)
+const isScrolled = ref(false)
+
+const isDesktop = () => {
+  desktop.value = window.innerWidth > 962
+  mediumScreen.value = window.innerWidth > 962 && window.innerWidth < 1280
+}
+
+const menuItem = () => {
+  if (!desktop.value) {
+    const checkboxMenu = document.getElementById("menu-btn")
+    if (checkboxMenu) checkboxMenu.checked = false
   }
 }
+
+const listenScroll = () => {
+  isScrolled.value = window.scrollY > 50
+}
+
+onMounted(() => {
+  isDesktop()
+  window.addEventListener('resize', isDesktop)
+  window.addEventListener('scroll', listenScroll)
+})
 </script>
 
 <style scoped>

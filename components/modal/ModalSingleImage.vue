@@ -1,5 +1,5 @@
 <template>
-  <div id="overlay" class="fixed top-0 left-0 right-0 bottom-0 bg-black/95 text-white z-30 flex flex-col justify-between items-center">
+  <div id="overlay" class="fixed top-0 left-0 right-0 bottom-0 bg-black/95 text-white flex flex-col justify-between items-center">
     <div class="w-full bg-black flex items-center justify-end">
       <h2 v-if="currentDescription" class="text-xl text-white w-full text-center -mr-8">
         {{  currentTitle }}
