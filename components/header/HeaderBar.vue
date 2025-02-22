@@ -95,7 +95,7 @@ const isScrolled = ref(false)
 
 const isDesktop = () => {
   desktop.value = window.innerWidth > 962
-  mediumScreen.value = window.innerWidth > 962 && window.innerWidth < 1280
+  mediumScreen.value = window.innerWidth > 962 && window.innerWidth < 1420
 }
 
 const menuItem = () => {
