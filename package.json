@@ -2,6 +2,9 @@
   "name": "front-nuxt",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "dev": "NODE_ENV=development nuxt",
     "build": "nuxt build",
