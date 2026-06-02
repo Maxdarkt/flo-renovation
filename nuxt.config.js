@@ -64,7 +64,7 @@ export default {
   plugins: [],
 
   serverMiddleware: [
-    { path: '/api/send-email', handler: './server/api/send-email.js' },
+    { path: '/api/send-email', handler: require('./server/api/send-email') },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
