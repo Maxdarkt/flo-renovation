@@ -1,10 +1,6 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'server',
-  server: {
-    host: '0.0.0.0',
-    port: 8080,
-  },
+  target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s FLO-RENOVATION',
@@ -62,10 +58,6 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
-
-  serverMiddleware: [
-    { path: '/api/send-email', handler: '~/server/api/send-email.js' },
-  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
