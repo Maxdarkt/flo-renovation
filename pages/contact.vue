@@ -222,7 +222,7 @@ export default {
         title: 'Contact',
         titleColor: 'text-primary',
         description:
-          "Si vous avez la moindre question, si vous souhaitez que l'on vous rapelle, c'est ici !",
+          'Un devis gratuit, sans engagement. Parlez-nous de votre projet, on s\'occupe du reste.',
       },
       projectOptions: [
         {
