@@ -116,7 +116,7 @@ export default {
         },
         {
           id: 2,
-          src: require('@/assets/images/frontDoor/porte_interieur_anthracite_int.jpg'),
+          src: '/images/frontDoor/porte_interieur_anthracite_int.jpg',
           alt: 'Photo porte entrée intérieur',
           title: 'Porte d\'entrée',
           text: 'Découvrir notre gamme porte d\'entrée.',

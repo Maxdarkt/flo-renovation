@@ -301,14 +301,14 @@ export default {
         },
         {
           id: 31,
-          src: require('@/assets/images/frontDoor/porte_interieur_anthracite_int.jpg'),
+          src: '/images/frontDoor/porte_interieur_anthracite_int.jpg',
           alt: 'photo porte d\'entrée',
           title: 'Porte d\'entrée',
           category: 'frontDoor'
         },
         {
           id: 31,
-          src: require('@/assets/images/frontDoor/porte_exterieur_1.jpg'),
+          src: '/images/frontDoor/porte_exterieur_1.jpg',
           alt: 'photo porte d\'entrée',
           title: 'Porte d\'entrée',
           category: 'frontDoor'

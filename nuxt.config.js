@@ -1,6 +1,6 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  target: 'server',
   server: {
     host: '0.0.0.0',
     port: 8080,
@@ -19,7 +19,10 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     script: [
-      { src: 'https://www.googletagmanager.com/gtag/js?id=AW-11399990970', async: true },
+      {
+        src: 'https://www.googletagmanager.com/gtag/js?id=AW-11399990970',
+        async: true,
+      },
       {
         innerHTML: `
           window.dataLayer = window.dataLayer || [];
@@ -28,39 +31,41 @@ export default {
           gtag('config', 'AW-11399990970');
         `,
         type: 'text/javascript',
-        charset: 'utf-8'
-      }
+        charset: 'utf-8',
+      },
     ],
     __dangerouslyDisableSanitizersByTagID: {
-      'gtag': ['innerHTML']
-    }
+      gtag: ['innerHTML'],
+    },
   },
   router: {
     extendRoutes(routes, resolve) {
-      routes.push(
-      {
+      routes.push({
         name: 'Error',
         path: '/*',
-        component: resolve(__dirname, 'pages/404.vue')
+        component: resolve(__dirname, 'pages/404.vue'),
       })
-    }
+    },
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '@/assets/css/style.css'
-  ],
+  css: ['@/assets/css/style.css'],
 
   publicRuntimeConfig: {
     nodeEnv: process.env.NODE_ENV,
-    apiUrlProd: process.env.API_MT_URL_PROD,
-    apiUrlDev: process.env.API_MT_URL_DEV,
-    xApiKey: process.env.X_API_KEY,
+  },
+
+  privateRuntimeConfig: {
     emailToProd: process.env.EMAIL_TO_PROD,
-    emailToDev: process.env.EMAIL_TO_DEV
+    emailToDev: process.env.EMAIL_TO_DEV,
+    smtpPass: process.env.SMTP_PASS,
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
+
+  serverMiddleware: [
+    { path: '/api/send-email', handler: '~/server/api/send-email.js' },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -79,10 +84,13 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/dotenv',
-    ['nuxt-gmaps', {
-      key: process.env.GOOGLE_MAPS_API_KEY_FLO,
-      // you can use libraries: ['places']
-    }],
+    [
+      'nuxt-gmaps',
+      {
+        key: process.env.GOOGLE_MAPS_API_KEY_FLO,
+        // you can use libraries: ['places']
+      },
+    ],
   ],
   dotenv: {
     path: process.cwd(),
@@ -94,6 +102,6 @@ export default {
         tailwindcss: {},
         autoprefixer: {},
       },
-    }
+    },
   },
 }

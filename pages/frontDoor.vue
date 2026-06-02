@@ -44,7 +44,7 @@ export default {
         },
         {
           id: 2,
-          src: require('@/assets/images/frontDoor/porte_interieur_anthracite_int.jpg'),
+          src: '/images/frontDoor/porte_interieur_anthracite_int.jpg',
           alt: 'Porte d\'entrée',
           title: 'Porte d\'entrée',
           isLink: true,

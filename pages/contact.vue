@@ -1,8 +1,8 @@
 <template>
   <div>
-    <BannerTitle 
+    <BannerTitle
       :is-picture="titleBar.isPicture"
-      :src="titleBar.src" 
+      :src="titleBar.src"
       :title="titleBar.title"
       :title-color="titleBar.titleColor"
       :description="titleBar.description"
@@ -11,33 +11,24 @@
     <div class="flex flex-col md:flex-row items-center mt-16 p-4">
       <!-- Infos contact -->
       <div class="w-full xxs:w-3/4 md:w-2/5 md:pl-4 mymd:pl-10 lg:pl-16">
-        <h2 class="text-2xl font-semibold">
-          Informations de contact
-        </h2>
+        <h2 class="text-2xl font-semibold">Informations de contact</h2>
         <div class="h-2 border-b-2 border-primary my-4 w-28"></div>
         <div class="flex items-center space-x-4">
           <outline-phone-icon class="w-10 h-10 text-primary" />
           <div>
-            <p class="text-lg font-medium">
-              Téléphone :
-            </p>
-            <p class="font-extralight">
-              Tél : 04 50 46 51 55
-            </p>
-            <p class="font-extralight">
-              Tél : 06 33 77 78 77
-            </p>
+            <p class="text-lg font-medium">Téléphone :</p>
+            <p class="font-extralight">Tél : 04 50 46 51 55</p>
+            <p class="font-extralight">Tél : 06 33 77 78 77</p>
           </div>
         </div>
         <div class="h-2 border-b-2 border-primary my-4 w-28"></div>
         <div class="flex items-center space-x-4">
           <outline-map-icon class="w-10 h-10 text-primary" />
           <div>
-            <p class="text-lg font-medium">
-              Addresse :
-            </p>
+            <p class="text-lg font-medium">Addresse :</p>
             <p class="font-extralight">
-              5 avenue du pont de Tasset ,<br /> 74960 ANNECY
+              5 avenue du pont de Tasset ,<br />
+              74960 ANNECY
             </p>
           </div>
         </div>
@@ -45,9 +36,7 @@
         <div class="flex items-center space-x-4">
           <outline-mail-icon class="w-10 h-10 text-primary" />
           <div>
-            <p class="text-lg font-medium">
-              Email :
-            </p>
+            <p class="text-lg font-medium">Email :</p>
             <p class="font-extralight">
               <a href="mailto:contact@flo-renovation.fr">
                 contact@flo-renovation.fr
@@ -60,7 +49,7 @@
       <div class="w-full md:w-3/5 p-4 bg-white rounded-md mt-8 md:mt-0">
         <form id="contactForm" action="#">
           <div class="grid gap-6 mb-6 md:grid-cols-2">
-            <InputText 
+            <InputText
               id="firstName"
               label-text="Prénom"
               type-input="text"
@@ -69,7 +58,7 @@
               :is-disabled="false"
               @event-change-value="onChangeValue"
             />
-            <InputText 
+            <InputText
               id="lastName"
               label-text="Nom"
               type-input="text"
@@ -80,7 +69,7 @@
             />
           </div>
           <div class="grid gap-6 mb-6 md:grid-cols-2">
-            <SelectSingle 
+            <SelectSingle
               id="project"
               label-text="Votre projet"
               label-choice="Choisir le type de projet"
@@ -89,7 +78,7 @@
               :is-disabled="false"
               @event-change-value="onChangeValue"
             />
-            <InputText 
+            <InputText
               id="address"
               label-text="Adresse"
               type-input="text"
@@ -100,7 +89,7 @@
             />
           </div>
           <div class="grid gap-6 mb-6 md:grid-cols-2">
-            <InputText 
+            <InputText
               id="postal"
               label-text="Code Postal"
               type-input="text"
@@ -109,7 +98,7 @@
               :is-disabled="false"
               @event-change-value="onChangeValue"
             />
-            <InputText 
+            <InputText
               id="city"
               label-text="Ville"
               type-input="text"
@@ -120,7 +109,7 @@
             />
           </div>
           <div class="grid gap-6 mb-6 md:grid-cols-2">
-            <InputText 
+            <InputText
               id="mobile"
               label-text="Téléphone"
               type-input="tel"
@@ -129,7 +118,7 @@
               :is-disabled="false"
               @event-change-value="onChangeValue"
             />
-            <InputText 
+            <InputText
               id="email"
               label-text="email"
               type-input="email"
@@ -140,7 +129,7 @@
             />
           </div>
           <div class="mb-6">
-            <InputTextarea 
+            <InputTextarea
               id="message"
               label-text="Votre message"
               :is-required="false"
@@ -149,11 +138,23 @@
             />
           </div>
           <div class="flex justify-end space-x-12 my-4">
-            <button class="btn btn-default" type="reset" @click="resetForm">Effacer</button>
-            <button class="btn" :class="[validatefields ? 'btn-primary' : 'btn-disabled']" type="submit" @click.prevent="sendEmail">Envoyer</button>
+            <button class="btn btn-default" type="reset" @click="resetForm">
+              Effacer
+            </button>
+            <button
+              class="btn"
+              :class="[validatefields ? 'btn-primary' : 'btn-disabled']"
+              type="submit"
+              @click.prevent="sendEmail"
+            >
+              Envoyer
+            </button>
           </div>
         </form>
-        <div id="alert-form" class="text-lg text-center py-2 my-4 transition duration-700">
+        <div
+          id="alert-form"
+          class="text-lg text-center py-2 my-4 transition duration-700"
+        >
           {{ alertForm }}
         </div>
       </div>
@@ -163,44 +164,44 @@
       <GMap
         ref="gMap"
         language="fr"
-        :cluster="{options: {styles: clusterStyle}}"
-        :center="{lat: locations[0].lat, lng: locations[0].lng}"
-        :options="{fullscreenControl: false, styles: mapStyle}"
+        :cluster="{ options: { styles: clusterStyle } }"
+        :center="{ lat: locations[0].lat, lng: locations[0].lng }"
+        :options="{ fullscreenControl: false, styles: mapStyle }"
         :zoom="12"
       >
         <GMapMarker
           v-for="location in locations"
           :key="location.id"
-          :position="{lat: location.lat, lng: location.lng}"
-          :options="{icon: location === currentLocation ? pins.selected : pins.notSelected}"
+          :position="{ lat: location.lat, lng: location.lng }"
+          :options="{
+            icon:
+              location === currentLocation ? pins.selected : pins.notSelected,
+          }"
           @click="currentLocation = location"
         >
-          <GMapInfoWindow :options="{maxWidth: 200}">
-            <code>
-              lat: {{ location.lat }},
-              lng: {{ location.lng }}
-            </code>
+          <GMapInfoWindow :options="{ maxWidth: 200 }">
+            <code> lat: {{ location.lat }}, lng: {{ location.lng }} </code>
           </GMapInfoWindow>
         </GMapMarker>
-        <GMapCircle :options="circleOptions"/>
+        <GMapCircle :options="circleOptions" />
       </GMap>
     </div>
   </div>
 </template>
 
 <script>
-import InputText from '@/components/form/input/InputText.vue';
-import InputTextarea from '@/components/form/input/InputTextarea.vue';
-import SelectSingle from '@/components/form/select/SelectSingle.vue';
-import { validateForm, changeClassForm } from '~/assets/js/validateForm';
-import regex from '~/assets/js/regex';
+import InputText from '@/components/form/input/InputText.vue'
+import InputTextarea from '@/components/form/input/InputTextarea.vue'
+import SelectSingle from '@/components/form/select/SelectSingle.vue'
+import { validateForm, changeClassForm } from '~/assets/js/validateForm'
+import regex from '~/assets/js/regex'
 
 export default {
   name: 'ContactPage',
   components: {
     InputText,
     InputTextarea,
-    SelectSingle
+    SelectSingle,
   },
   data() {
     return {
@@ -220,93 +221,99 @@ export default {
         src: 'https://placeimg.com/1400/400/arch',
         title: 'Contact',
         titleColor: 'text-primary',
-        description: 'Si vous avez la moindre question, si vous souhaitez que l\'on vous rapelle, c\'est ici !'
+        description:
+          "Si vous avez la moindre question, si vous souhaitez que l'on vous rapelle, c'est ici !",
       },
       projectOptions: [
         {
           label: 'Neuf',
-          value: 'Neuf'
+          value: 'Neuf',
         },
-        { 
+        {
           label: 'Rénovation',
-          value: 'Renovation'
+          value: 'Renovation',
         },
-        { 
+        {
           label: 'Extension',
-          value: 'Extension'
+          value: 'Extension',
         },
-        { 
+        {
           label: 'Autre',
-          value: 'Autre'
-        }
+          value: 'Autre',
+        },
       ],
       currentLocation: {
         title: 'Meythet',
         lat: 45.9096446,
-        lng: 6.0969738
+        lng: 6.0969738,
       },
       circleOptions: {},
       locations: [
         {
           lat: 45.9096446,
-          lng: 6.0969738
-        }
+          lng: 6.0969738,
+        },
       ],
       pins: {
         selected: null,
-        notSelected: null
+        notSelected: null,
       },
       mapStyle: [],
       clusterStyle: [
         {
-          url: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m1.png",
+          url: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m1.png',
           width: 56,
           height: 56,
-          textColor: "#fff"
-        }
-      ]
+          textColor: '#fff',
+        },
+      ],
     }
   },
   computed: {
     validatefields() {
-      if(regex.email.test(this.email) && regex.name.test(this.firstName) && regex.name.test(this.lastName) && regex.nameComplex.test(this.address)) {
+      if (
+        regex.email.test(this.email) &&
+        regex.name.test(this.firstName) &&
+        regex.name.test(this.lastName) &&
+        regex.nameComplex.test(this.address)
+      ) {
         return true
       }
       return false
-    }
+    },
   },
   methods: {
     changeClassForm,
     validateForm,
     onChangeValue(payload) {
-      switch(payload.id) {
-        case "lastName":
+      switch (payload.id) {
+        case 'lastName':
           this.lastName = payload.value
-          break;
-        case "firstName":
+          break
+        case 'firstName':
           this.firstName = payload.value
-          break;
-        case "project":
+          break
+        case 'project':
           this.project = payload.value
-          break;
-        case "address":
+          break
+        case 'address':
           this.address = payload.value
-          break;
-        case "postal":
+          break
+        case 'postal':
           this.postal = payload.value
-          break;
-        case "city":
+          break
+        case 'city':
           this.city = payload.value
-          break;
-        case "mobile":
+          break
+        case 'mobile':
           this.mobile = payload.value
-          break;
-        case "email":
+          break
+        case 'email':
           this.email = payload.value
-          break;
-        case "message":
+          break
+        case 'message':
           this.message = payload.value
-          break;
+          break
         default:
           console.log('Error switch onChangeValue')
       }
@@ -314,72 +321,67 @@ export default {
     },
     sendEmail() {
       if (!this.validatefields) {
-        return;
+        return
       }
 
       const datas = {
-        to: this.$config.nodeEnv === 'development' ? this.$config.emailToDev : this.$config.emailToProd,
-        fromName: 'Notification Flo-Renovation',
-        subject: 'Nouveau message de contact Flo-Renovation',
-        html: `
-          <p> Voici une demande de contact de la part de ${this.firstName} ${this.lastName} :</p>
-          <p>Projet: ${this.project}</p>
-          <p>Adresse: ${this.address}</p>
-          <p>Code Postal: ${this.postal}</p>
-          <p>Ville: ${this.city}</p>
-          <p>Téléphone: ${this.mobile}</p>
-          <p>Email: ${this.email}</p>
-          <p>Message: ${this.message}</p>
-        `,
-      };
+        firstName: this.firstName,
+        lastName: this.lastName,
+        project: this.project,
+        address: this.address,
+        postal: this.postal,
+        city: this.city,
+        mobile: this.mobile,
+        email: this.email,
+        message: this.message,
+      }
 
-      const url = this.$config.nodeEnv === 'development' ? `${this.$config.apiUrlDev}/email/html-basic` : `${this.$config.apiUrlProd}/email/html-basic`;
-
-      const headers = {
-        'Content-Type': 'application/json',
-        'X-API-KEY': this.$config.xApiKey,
-      };
-
-      // Appel à l'API pour envoyer l'email
-      fetch(url, {
+      fetch('/api/send-email', {
         method: 'POST',
-        headers,
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(datas),
       })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          this.alertForm = 'Le mail a bien été envoyé, je vous répondrai dans les plus brefs délais.';
-          const element = document.getElementById('alert-form');
-          element.classList.add('text-green-400', 'opacity-100');
-          setTimeout(() => {
-            element.classList.remove('opacity-100');
-          }, 4000);
-          setTimeout(() => {
-            this.alertForm = null;
-            element.classList.remove('text-green-400');
-            this.resetForm();
-          }, 5000);
-        } else {
-          this.handleError();
-        }
-      })
-      .catch(() => {
-        this.handleError();
-      });
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.success) {
+            if (typeof window.gtag !== 'undefined') {
+              window.gtag('event', 'conversion', {
+                send_to: 'AW-11399990970/a2boCKHU8u4ZELqd-Lsq',
+              })
+            }
+            this.alertForm =
+              'Le mail a bien été envoyé, je vous répondrai dans les plus brefs délais.'
+            const element = document.getElementById('alert-form')
+            element.classList.add('text-green-400', 'opacity-100')
+            setTimeout(() => {
+              element.classList.remove('opacity-100')
+            }, 4000)
+            setTimeout(() => {
+              this.alertForm = null
+              element.classList.remove('text-green-400')
+              this.resetForm()
+            }, 5000)
+          } else {
+            this.handleError()
+          }
+        })
+        .catch(() => {
+          this.handleError()
+        })
     },
     handleError() {
-      this.alertForm = 'Une erreur est survenue. Veuillez réessayer ultérieurement.';
-      const element = document.getElementById('alert-form');
-      element.classList.add('text-red-400', 'opacity-100');
+      this.alertForm =
+        'Une erreur est survenue. Veuillez réessayer ultérieurement.'
+      const element = document.getElementById('alert-form')
+      element.classList.add('text-red-400', 'opacity-100')
       setTimeout(() => {
-        element.classList.remove('opacity-100');
-      }, 4000);
+        element.classList.remove('opacity-100')
+      }, 4000)
       setTimeout(() => {
-        this.alertForm = null;
-        element.classList.remove('text-red-400');
-        this.resetForm();
-      }, 5000);
+        this.alertForm = null
+        element.classList.remove('text-red-400')
+        this.resetForm()
+      }, 5000)
     },
     resetForm() {
       // get all inputs
@@ -407,7 +409,7 @@ export default {
     resetInput(element) {
       element.classList.remove('is-invalid')
       element.classList.remove('is-valid')
-    }
-  }
+    },
+  },
 }
 </script>
