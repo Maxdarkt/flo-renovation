@@ -1,13 +1,4 @@
 {
-  "builds": [
-    {
-      "src": "api/send-email.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "nuxt.config.js",
-      "use": "@nuxtjs/vercel-builder",
-      "config": {}
-    }
-  ]
+  "buildCommand": "npm run generate",
+  "outputDirectory": "dist"
 }
