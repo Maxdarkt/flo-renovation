@@ -1,8 +1,9 @@
 <template>
   <div class="flex flex-col justify-between">
     <HeaderBar />
-    <Nuxt class="min-inter"/>
+    <Nuxt class="min-inter" />
     <FooterBar />
+    <CookieConsent />
   </div>
 </template>
 
@@ -10,15 +11,13 @@
 export default {
   name: 'DefaultLayout',
   data() {
-    return {
-      
-    }
+    return {}
   },
 }
 </script>
 
 <style>
-.min-inter{
+.min-inter {
   /* Header + Footer = 32 * 0.25 rem = 8rem */
   min-height: calc(100vh - 14rem);
   margin-top: 6rem;

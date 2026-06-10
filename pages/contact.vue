@@ -163,7 +163,21 @@
     </div>
     <!-- MAPS -->
     <div class="mb-4">
+      <div
+        v-if="!mapEnabled"
+        class="lg:max-w-screen-lg mx-auto my-8 p-8 bg-gray-100 rounded-md text-center"
+      >
+        <p class="font-medium">5 avenue du pont de Tasset, 74960 Annecy</p>
+        <p class="text-sm text-gray-500 mt-2">
+          La carte Google Maps dépose des cookies tiers. Activez-la pour
+          l'afficher.
+        </p>
+        <button class="btn btn-primary mt-4" @click="enableMap">
+          Afficher la carte
+        </button>
+      </div>
       <GMap
+        v-else
         ref="gMap"
         language="fr"
         :cluster="{ options: { styles: clusterStyle } }"
@@ -271,6 +285,12 @@ export default {
     }
   },
   computed: {
+    mapEnabled() {
+      return (
+        Boolean(this.$cookieConsent) &&
+        this.$cookieConsent.status === 'accepted'
+      )
+    },
     validatefields() {
       if (
         regex.email.test(this.email) &&
@@ -286,6 +306,11 @@ export default {
   methods: {
     changeClassForm,
     validateForm,
+    enableMap() {
+      if (this.$cookieConsent) {
+        this.$cookieConsent.reopen()
+      }
+    },
     onChangeValue(payload) {
       switch (payload.id) {
         case 'lastName':
